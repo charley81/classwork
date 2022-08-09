@@ -1,0 +1,1 @@
+1. mkdir death_start, cd death_start, touch darth_vadar.txt princess_leia.txt storm_trooper.txt
