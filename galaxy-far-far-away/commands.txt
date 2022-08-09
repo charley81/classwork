@@ -11,8 +11,14 @@
 11. cd ../../ mkdir yavin_4
 12. mv millenium_falcon ../yavin_4
 13. mkdir x_wing
-14.
-15.
-16.
-17
+14. mv princess_leia.xt ../../yavin_4, mv luke.txt ../x_wing
+15. mv millenium_falcon x_wing ../
+16. cd death_start, mkdir tie_fighter_1 tie_fighter_2 tie_fighter_3
+17. mv darth_vader.txt tie_fighter_1
+18. cp storm_trooper.txt tie_fighter_2 tie_fighter_3
+19. mv tie_fighter_1 tie_fighter_2 tie_fighter_3 ../
+20. rm -r tie_fighter_2 tie_fighter_3
+21. cd x_wing, touch the_force.txt
+22. cd ../, rm -r death_start
+23. mv x_wing millenium_falcon yavin_4
 
