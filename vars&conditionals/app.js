@@ -166,20 +166,33 @@ let number = 2
 // Ex. 1
 const letter = 'E'
 
-switch (letter) {
-  case 'A':
-  case 'E':
-  case 'I':
-  case 'O':
-  case 'U':
-    console.log('vowel')
-    break
-  default:
-    console.log('consonant')
-}
+// switch (letter) {
+//   case 'A':
+//   case 'E':
+//   case 'I':
+//   case 'O':
+//   case 'U':
+//     console.log('vowel')
+//     break
+//   default:
+//     console.log('consonant')
+//     break
+// }
 
 // Ex. 2
 const number1 = 0
 const status1 =
   number1 > 0 ? 'Positive' : number1 === 0 ? 'Number is zero' : 'Negative'
-console.log(status1)
+// console.log(status1)
+
+// logical operator notes
+// && return first falsy value or last truthy value is no falsy values
+// || returns first truthy value or last falsy value in no truthy value
+// alert(1 && 2 && null && 3) // null
+// alert(1 && 2 && 3) // 3, the last one\
+
+// if (age >= 14 && age <= 90) {
+//   console.log(true)
+// } else {
+//   console.log(false)
+// }
