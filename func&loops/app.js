@@ -47,3 +47,5 @@ const planetHasWaterArrow = planet =>
   planet === 'Earth' || planet === 'Mars' ? true : false
 
 console.log('Ex 3 planetEx:', planetHasWaterArrow('Venus'))
+
+// WHILE LOOPS / FOR LOOPS
