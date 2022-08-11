@@ -42,3 +42,40 @@ for (let i = 1; i <= 7; i++) {
 
   console.log(step)
 }
+
+for (let i = 0; i <= 10; i++) {
+  if (i % 2 === 0) {
+    console.log(i)
+  }
+}
+
+// While loops
+let num1 = 0
+
+while (num1 <= 35) {
+  console.log(num1)
+  num1 += 3
+}
+
+let num2 = 5
+while (num2 <= 100) {
+  console.log(num2)
+  num2 += 5
+}
+
+let num3 = 0
+while (num3 <= 20) {
+  if (num3 % 2 === 0) {
+    console.log(num3 * 3)
+  }
+  num3++
+}
+
+let i = 0
+let j = 0
+while (num4 < 20) {
+  
+  while () {
+
+  }
+}
