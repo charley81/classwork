@@ -155,21 +155,40 @@
 //   console.log(str)
 // }
 
-function multiplyAll(arr) {
-  let product = 1
+// function multiplyAll(arr) {
+//   let product = 1
 
-  for (let i = 0; i < arr.length; i++) {
-    const subArray = arr[i]
-    for (let j = 0; j < subArraylength; j++) {
-      console.log((product *= subArray[j]))
-    }
+//   for (let i = 0; i < arr.length; i++) {
+//     const subArray = arr[i]
+//     for (let j = 0; j < subArraylength; j++) {
+//       console.log((product *= subArray[j]))
+//     }
+//   }
+
+//   return product
+// }
+
+// multiplyAll([
+//   [1, 2],
+//   [3, 4],
+//   [5, 6, 7],
+// ])
+
+//1
+//12
+//123
+//1234
+//12345
+
+let i = 1
+
+while (i <= 5) {
+  let str = ''
+  let j = 1
+  while (j <= i) {
+    str += j
+    j++
   }
-
-  return product
+  console.log(str)
+  i++
 }
-
-multiplyAll([
-  [1, 2],
-  [3, 4],
-  [5, 6, 7],
-])
