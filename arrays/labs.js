@@ -139,6 +139,7 @@ function stringsLongerThan(strs, num) {
 //   )
 // )
 
+// Ex. 10
 function addList(...args) {
   if (!args) {
     return 0
