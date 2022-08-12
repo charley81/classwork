@@ -76,42 +76,57 @@
 // }
 
 // // Ex. 4
-// // let i = 0
-// // let j = 0
-// // while (num4 < 20) {
+let pri = 2
+let num = 0
+let num1 = 0
+while (pri <= 20) {
+  num = pri - 1
+  while (num > 1) {
+    if (pri % num === 0) {
+      num1++
+    }
+    num--
+  }
 
-// //   while () {
-
-// //   }
-// // }
+  if (num1 === 0) {
+    console.log(pri)
+  }
+  num1 = 0
+  pri++
+}
 
 // Ex. 5
-// let num5 = 1
+let num5 = 1
 
-// while (num5 <= 6) {
-//   console.log(num5 * 4)
-//   num5++
-// }
-// let num5 = 10
-// let coins = 0
-// while (num5 > 4) {
-//   console.log((coins += 4))
-//   num5--
-// }
+while (num5 <= 6) {
+  console.log(num5 * 4)
+  num5++
+}
+
+let num5 = 10
+let coins = 0
+while (num5 > 4) {
+  console.log((coins += 4))
+  num5--
+}
 
 // Ex. 6
+let paid = 27.83
+while (paid <= 100) {
+  paid += 0.01
+}
 
 // Ex. 7
 // 10, 30, 50, 70, 90 20, 40, 60, 80 100
-let num = 10
-while (num <= 90) {
-  console.log(num)
-  num += 20
-  if (num === 90) {
-    console.log(num)
-    num = 20
-  }
-}
+// let num = 10
+// while (num <= 100) {
+//   console.log(num)
+//   num += 20
+//   if (num === 90) {
+//     console.log(num)
+//     num = 20
+//   }
+// }
 
 // // Ex. 8
 // let num8 = 500
