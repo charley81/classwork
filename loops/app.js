@@ -102,14 +102,18 @@
 // Ex. 6
 
 // Ex. 7
-// let num7 = 10
-// while (num7 <= 100) {
-//   if (num7 % 2 !== 0) {
-//     console.log(num7)
-//   }
-//   num7 += 10
-// }
-// Ex. 8
+// 10, 30, 50, 70, 90 20, 40, 60, 80 100
+let num = 10
+while (num <= 90) {
+  console.log(num)
+  num += 20
+  if (num === 90) {
+    console.log(num)
+    num = 20
+  }
+}
+
+// // Ex. 8
 // let num8 = 500
 // while (num8 <= 800) {
 //   if (num8 % 4 === 0) {
