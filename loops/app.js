@@ -76,45 +76,54 @@
 // }
 
 // // Ex. 4
-let pri = 2
-let num = 0
-let num1 = 0
-while (pri <= 20) {
-  num = pri - 1
-  while (num > 1) {
-    if (pri % num === 0) {
-      num1++
-    }
-    num--
-  }
+// let pri = 2
+// let num = 0
+// let num1 = 0
+// while (pri <= 20) {
+//   num = pri - 1
+//   while (num > 1) {
+//     if (pri % num === 0) {
+//       num1++
+//     }
+//     num--
+//   }
 
-  if (num1 === 0) {
-    console.log(pri)
-  }
-  num1 = 0
-  pri++
-}
+//   if (num1 === 0) {
+//     console.log(pri)
+//   }
+//   num1 = 0
+//   pri++
+// }
 
-// Ex. 5
-let num5 = 1
+// // Ex. 5
+// let num5 = 1
 
-while (num5 <= 6) {
-  console.log(num5 * 4)
-  num5++
-}
+// while (num5 <= 6) {
+//   console.log(num5 * 4)
+//   num5++
+// }
 
-let num5 = 10
-let coins = 0
-while (num5 > 4) {
-  console.log((coins += 4))
-  num5--
-}
-
+// let num5 = 10
+// let coins = 0
+// while (num5 > 4) {
+//   console.log((coins += 4))
+//   num5--
+// }
+// console.log('final', coins)
 // Ex. 6
-let paid = 27.83
-while (paid <= 100) {
-  paid += 0.01
-}
+// let paid = 100 * 100
+// const total = 27.83 * 100
+// let fifties = 0
+// let twenties = 0
+// let tens = 0
+// let fives = 0
+// let ones = 0
+// let pennnies = 0
+// let nickles = 0
+// let dimes = 0
+// let quaters = 0
+
+// while (paid > total) {}
 
 // Ex. 7
 // 10, 30, 50, 70, 90 20, 40, 60, 80 100
@@ -136,3 +145,31 @@ while (paid <= 100) {
 //   }
 //   num8++
 // }
+
+// NESTED FOR LOOPS
+// for (let i = 1; i <= 5; i++) {
+//   let str = ''
+//   for (let j = 1; j <= i; j++) {
+//     str += j
+//   }
+//   console.log(str)
+// }
+
+function multiplyAll(arr) {
+  let product = 1
+
+  for (let i = 0; i < arr.length; i++) {
+    const subArray = arr[i]
+    for (let j = 0; j < subArraylength; j++) {
+      console.log((product *= subArray[j]))
+    }
+  }
+
+  return product
+}
+
+multiplyAll([
+  [1, 2],
+  [3, 4],
+  [5, 6, 7],
+])
