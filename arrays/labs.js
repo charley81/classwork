@@ -141,9 +141,8 @@ function stringsLongerThan(strs, num) {
 
 // Ex. 10
 function addList(...args) {
-  if (!args) {
-    return 0
-  }
+  if (!args) return 0
+
   let sum = 0
 
   for (let i = 0; i < args.length; i++) {
@@ -153,4 +152,114 @@ function addList(...args) {
   return sum
 }
 
+// console.log(addList(null))
 // console.log(addList(1, 50, 1.23))
+
+// Ex. 3
+function isCharAVowel2(char) {
+  if (
+    char === 'a' ||
+    char === 'e' ||
+    char === 'i' ||
+    char === 'o' ||
+    char === 'u'
+  ) {
+    return true
+  }
+
+  return false
+}
+
+// console.log(isCharAVowel2('b'))
+
+// Ex. 4
+const sumArray2 = function (arr) {
+  let output = 0
+
+  for (let i = 0; i < arr.length; i++) {
+    output += arr[i]
+  }
+
+  return output
+}
+
+// console.log(sumArray2([6, 7, 3, 2, 1, 9]))
+
+// Ex. 5
+function multiplyArray2(arr) {
+  let output = 1
+
+  for (let num of arr) {
+    output *= num
+  }
+
+  return output
+}
+
+// console.log(multiplyArray2([2, 4, 5]))
+
+// Ex. 6
+const numArgs2 = function (items) {
+  return items.length
+}
+
+// console.log(numArgs('item1', true, false, 1, 2, 3))
+
+// Ex. 7
+function reverseString2(str) {
+  const output = []
+
+  for (let i = str.length - 1; i >= 0; i--) {
+    output.push(str[i])
+  }
+
+  return output.join('')
+}
+
+// console.log(reverseString2('Hello'))
+
+// Ex. 8
+const longestStringInArray2 = function (arr) {
+  let longestLength = arr[0].length
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length > longestLength) {
+      longestLength = arr[i].length
+    }
+  }
+
+  return longestLength
+}
+
+// console.log(longestStringInArray2(['hello', 'bye', 'fdffdfdfdfdf', 'yo']))
+
+// Ex. 9
+function stringsLongerThan2(arr, num) {
+  const output = []
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length > num) {
+      output.push(arr[i])
+    }
+  }
+
+  return output
+}
+
+// console.log(stringsLongerThan2(['hello', 'bye', 'fdffdfdfdfdf', 'yo'], 3))
+
+// Bonus
+function addList(...nums) {
+  if (!nums) return 0
+
+  let output = 0
+
+  for (let i = 0; i < nums.length; i++) {
+    output += nums[i]
+  }
+
+  return output
+}
+// console.log(addList()) // 0
+
+// console.log(addList(1, 50, 1.23)) // 52.23
