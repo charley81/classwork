@@ -17,7 +17,7 @@ const radio = {
       name: '97.9FM The Beat',
       songs: [
         {
-          artist: 'Furute',
+          artist: 'Future',
           title: 'Tony Montana',
         },
         {
@@ -25,7 +25,7 @@ const radio = {
           title: 'Spend It',
         },
         {
-          artist: 'T.I',
+          artist: 'T.I.',
           title: 'What you know about that',
         },
       ],
@@ -49,8 +49,8 @@ const radio = {
     },
   ],
   changeStation() {
-    let randomNumberStation = Math.floor(Math.random() * 2) + 0
-    let randomNumberSong = Math.floor(Math.random() * 3) + 0
+    let randomNumberStation = randomNumber(2, 0)
+    let randomNumberSong = randomNumber(3, 0)
     const station = radio.stations[randomNumberStation]
     const song = station.songs[randomNumberSong]
     console.log(
@@ -58,5 +58,7 @@ const radio = {
     )
   },
 }
+
+const randomNumber = (max, min) => Math.floor(Math.random() * max) + min
 
 radio.changeStation()
