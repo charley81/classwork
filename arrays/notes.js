@@ -172,3 +172,53 @@ const doesInclude = myArr.includes(3)
 const doesInclude2 = myArr.includes(4, 3)
 const doesInclude3 = myArr.includes(2, 2)
 // console.log(doesInclude3)
+
+// SPLICE => insert, remove and replace elements
+// arr.splice(start, deleteCount, elem1)
+// modifies arr starting from index start: removes deleteCount elements and then inserts elem 1
+const arr101 = ['I', 'Love', 'Javascript', 'right', 'now']
+// delete item
+// arr101.splice(1, 1) // from index 1 remove 1 element
+// console.log(arr101)
+arr101.splice(0, 3, 'lets', 'dance') // remove first three elements and replace with another
+// console.log(arr101)
+// console.log(arr101)
+const removed = arr101.splice(0, 2)
+// console.log(removed) // remove first two elements
+const arr334 = ['I', 'study', 'javascript']
+arr334.splice(2, 0, 'complex', 'language')
+// console.log(arr334)
+const arr1 = [1, 2, 3]
+// arr.splice(-1, 0, 3, 4) // from index -1 one step from the end, delete 0 elements, then insert 3 and 4
+
+// SLICE => returns a new array copy from index start to end (not including end)
+const arr2 = ['t', 'e', 's', 't']
+
+// console.log(arr2.slice(1, 3))
+//
+const arr2Copy = arr2.slice() // creates a copy
+// console.log(arr2Copy)
+
+// CONCAT
+// The method arr.concat creates a new array that includes values form other arrays and additional items
+// arr.concat(arg1, arg2)
+const arr3 = [1, 2]
+// console.log(arr3.concat([3, 4]))
+console.log(arr3.concat([3, 4], 5, 6))
+
+// forEach
+const arr4 = ['apples', 'grapes', 'cherries', 'peaches', 'mango']
+
+// arr4.forEach(word => alert(word))
+
+// Searching in array
+// indexOf - lastIndexOf - includes
+let arr5 = [1, 0, false]
+
+console.log(arr5.indexOf(0)) // 1
+console.log(arr5.indexOf(false)) // 2
+console.log(arr5.indexOf(null)) // -1
+
+const fruits = ['Apple', 'Orange', 'Apple']
+console.log(fruits.indexOf('Apple')) // 0 - first apple
+console.log(fruits.lastIndexOf('Apple')) // 2 - second apple
