@@ -60,6 +60,9 @@ const foods = ['bar b q', 'veggies', 'carbs', 'fruits', 'grains', 'cookies']
 const newArr = foods.map((food, i, arr) => food + '!')
 // console.log(newArr)
 
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// const addOne = numbers.forEach(num => console.log(num + 1))
+
 const items = [
   {
     name: 'cookies',
@@ -137,6 +140,11 @@ const newArr2 = myArr.map((num, i, arr) => {
 const arrFilter = myArr.filter((num, i, arr) => num > 2)
 // console.log(arrFilter)
 
+const arr99 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+const getOdds = arr99.filter(num => num % 2 !== 0)
+// console.log(getOdds)
+
 // SOME
 // Returns boolean value based on the condition satisfied, true or false.
 const checkSome = myArr.some(num => num > 2)
@@ -163,4 +171,4 @@ const numFind = myArr.find((num, i) => {
 const doesInclude = myArr.includes(3)
 const doesInclude2 = myArr.includes(4, 3)
 const doesInclude3 = myArr.includes(2, 2)
-console.log(doesInclude3)
+// console.log(doesInclude3)
