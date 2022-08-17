@@ -64,5 +64,60 @@ const test = {
   ],
 }
 
-const string = 'hello'
-console.log(string[2])
+const user = {
+  name: 'John',
+  surename: 'Smith',
+}
+
+user.name = 'Pete'
+delete user.name
+
+const schedule = {
+  name: 'John',
+}
+
+const isEmpty = obj => {
+  for (let key in obj) {
+    return false
+  }
+  return true
+}
+
+// console.log(isEmpty(schedule))
+
+let salaries = {
+  John: 100,
+  Ann: 160,
+  Pete: 130,
+}
+
+const getSum = obj => {
+  let output = 0
+  for (let key in obj) {
+    output += obj[key]
+  }
+  return output
+}
+
+getSum(salaries)
+
+let menu = {
+  width: 200,
+  height: 300,
+  title: 'My menu',
+}
+
+const menuObjClone = Object.assign({}, menu)
+
+const otherMenuObjClone = { ...menu }
+
+const multiplyNumeric = obj => {
+  for (let key in obj) {
+    if (typeof obj[key] === 'number') {
+      obj[key] *= 2
+    }
+  }
+}
+
+multiplyNumeric(menu)
+console.log(menu)
