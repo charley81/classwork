@@ -1,4 +1,7 @@
 // ===== Ex. 1 =====
+
+console.log('Ex. 1')
+
 class Cat {
   constructor(name, age, sex) {
     this.name = name
@@ -24,20 +27,25 @@ class Cat {
 }
 
 const sam = new Cat('Sam', 8, 'Male')
-// console.log(sam)
-// sam.eat()
-// sam.birthday()
-// sam.takesNap()
+console.log(sam)
+sam.eat()
+sam.birthday()
+sam.takesNap()
+
+console.log('\n')
 
 const lucy = new Cat('Lucy', 6, 'Female')
-// console.log(lucy)
-// lucy.eat()
-// lucy.birthday()
-// lucy.takesNap()
+console.log(lucy)
+lucy.eat()
+lucy.birthday()
+lucy.takesNap()
 
-console.log('========== Break ===========')
+console.log('\n')
 
 // ===== Ex. 2 =====
+
+console.log('Ex. 2')
+
 class Pirate {
   constructor(name, power, secretWeapon) {
     this.name = name
@@ -68,13 +76,15 @@ const jollyRoger = [
   new Pirate('Crazy Pirate', 93, 'Paralizes with his thoughts'),
 ]
 
-// jollyRoger[0].powerUp()
+jollyRoger[0].powerUp()
 
-// jollyRoger.forEach(pirate => {
-//   console.log(
-//     `Name: ${pirate.name} \n Power: ${pirate.power} \n Secret Weapon: ${pirate.secretWeapon}`
-//   )
-// })
+jollyRoger.forEach(pirate => {
+  console.log(
+    `Name: ${pirate.name} \n Power: ${pirate.power} \n Secret Weapon: ${pirate.secretWeapon}`
+  )
+})
+
+console.log('\n')
 
 const blackPearl = [
   new Pirate('Death Pearl', 100, 'Spits pearls of death'),
@@ -82,15 +92,18 @@ const blackPearl = [
   new Pirate('Crazy Pirate', 93, 'Paralizes with his thoughts'),
 ]
 
-// blackPearl.forEach(pirate => {
-//   console.log(
-//     `Name: ${pirate.name} \n Power: ${pirate.power} \n Secret Weapon: ${pirate.secretWeapon}`
-//   )
-// })
+blackPearl.forEach(pirate => {
+  console.log(
+    `Name: ${pirate.name} \n Power: ${pirate.power} \n Secret Weapon: ${pirate.secretWeapon}`
+  )
+})
 
-console.log('========== Break ===========')
+console.log('\n')
 
 // ===== Ex. 3 =====
+
+console.log('Ex. 3')
+
 class Car {
   constructor(number) {
     this.number = number
@@ -102,11 +115,14 @@ for (let i = 0; i < 100; i++) {
   freighter.push(new Car(i))
 }
 
-// console.log(freighter)
+console.log(freighter)
 
-console.log('========== Break ===========')
+console.log('\n')
 
 // ===== Ex. 4 =====
+
+console.log('Ex. 4')
+
 class Governor {
   static hasOffice = true
   static writesLaws = true
@@ -159,14 +175,14 @@ class PostalWorker extends Person {
   }
 }
 
-console.log('===== 1st postal worker =====')
 const Arrj = new PostalWorker('Aranjyothi')
 
 console.log(Arrj.openMailbox())
 console.log(Arrj.checksName())
 console.log(Arrj.deliveringMail())
 
-console.log('===== 2nd postal worker =====')
+console.log('\n')
+
 const Chris = new PostalWorker('Chris')
 console.log(Chris.openMailbox())
 console.log(Chris.checksName())
@@ -191,14 +207,15 @@ class Chef extends Person {
   }
 }
 
-console.log('===== 1st Chef =====')
+console.log('\n')
+
 const Joshua = new Chef('Joshua', 'pizza')
 console.log(Joshua)
 console.log(Joshua.preparesFood())
 console.log(Joshua.cooksFood())
 console.log(Joshua.presentsFood())
 
-console.log('===== 2nd Chef =====')
+console.log('\n')
 
 const John = new Chef('John', 'chicken curry')
 console.log(John)
@@ -206,19 +223,30 @@ console.log(John.preparesFood())
 console.log(John.cooksFood())
 console.log(John.presentsFood())
 
-console.log('========== Break ===========')
+console.log('\n')
 
 // ===== Ex. 5 =====
+
+console.log('Ex. 5')
+
 class BankAccount {
   constructor(ownerName, balance) {
     this.ownerName = ownerName
     this.balance = balance
-    this.balance = new Date().getMilliseconds()
+    this.acctNum = new Date().getMilliseconds()
   }
 
-  deposit() {}
+  deposit(amount) {
+    return `You deposited $${amount} and your new balance is $${
+      this.balance + amount
+    }`
+  }
 
-  withdraw() {}
+  withdraw(amount) {
+    return `You withdrew $${amount} and your new balance is $${
+      this.balance - amount
+    }`
+  }
 }
 
-console.log()
+const ChrisAccount = new BankAccount('Chris', 9000000000000)
