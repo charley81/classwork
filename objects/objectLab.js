@@ -49,8 +49,8 @@ const radio = {
     },
   ],
   changeStation() {
-    let randomNumberStation = randomNumber(2, 0)
-    let randomNumberSong = randomNumber(3, 0)
+    let randomNumberStation = randomNumber(radio.stations.length, 0)
+    let randomNumberSong = randomNumber(radio.stations[0].songs.length, 0)
     const station = radio.stations[randomNumberStation]
     const song = station.songs[randomNumberSong]
     console.log(
