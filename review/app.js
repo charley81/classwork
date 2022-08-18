@@ -117,6 +117,13 @@ for (let i = 0; i <= 100; i++) {
 // Yes
 // A shopping list
 
+// B
+const quotes = [
+  'I have no special talent. I am only passionately curious',
+  'Wisely, and slow. They stumble that run fast.',
+  'If you judge people, you have no time to love them.',
+]
+
 // ===== SECTION IV =====
 
 // ===== SECTION V =====
