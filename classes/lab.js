@@ -1,6 +1,6 @@
 // ===== Ex. 1 =====
 
-console.log('Ex. 1')
+console.log('Ex. 1 =====')
 
 class Cat {
   constructor(name, age, sex) {
@@ -44,7 +44,7 @@ console.log('\n')
 
 // ===== Ex. 2 =====
 
-console.log('Ex. 2')
+console.log('Ex. 2 =====')
 
 class Pirate {
   constructor(name, power, secretWeapon) {
@@ -102,7 +102,7 @@ console.log('\n')
 
 // ===== Ex. 3 =====
 
-console.log('Ex. 3')
+console.log('Ex. 3 =====')
 
 class Car {
   constructor(number) {
@@ -121,7 +121,7 @@ console.log('\n')
 
 // ===== Ex. 4 =====
 
-console.log('Ex. 4')
+console.log('Ex. 4 =====')
 
 class Governor {
   static hasOffice = true
@@ -227,7 +227,7 @@ console.log('\n')
 
 // ===== Ex. 5 =====
 
-console.log('Ex. 5')
+console.log('Ex. 5 =====')
 
 class BankAccount {
   constructor(ownerName, balance) {
@@ -252,9 +252,9 @@ class BankAccount {
 const chrisAccount = new BankAccount('Chris', 100)
 
 class CheckingAccount extends BankAccount {
-  constructor(ownerName, balance) {
+  constructor(ownerName, balance, overDraftEnabled) {
     super(ownerName, balance)
-    this.overDraftEnabled = true
+    this.overDraftEnabled = overDraftEnabled
     this.balance = balance
   }
 
@@ -262,22 +262,21 @@ class CheckingAccount extends BankAccount {
     if (this.balance < amount) {
       return `Insuficient Funds: Sorry but your current balance is $${this.balance} and you are requesting to withdraw $${amount}`
     }
-    return super.withdraw()
+    return super.withdraw(amount)
   }
 }
 
-const chrisChecking = new CheckingAccount('Chris', 150)
-console.log(chrisChecking.withdraw(250))
+const chrisChecking = new CheckingAccount('Chris', 250)
+console.log(chrisChecking.withdraw(350))
 
 class SavingsAccount extends BankAccount {
-  constructor(ownerName, balance) {
-    super(ownerName, balance)
+  constructor(ownerName) {
+    super(ownerName)
     this.ownerName = ownerName
-    this.balance = balance
   }
 
   withdraw() {
-    return `Sorry ${this.ownerName}, but withdraws are not allowd from this account`
+    return `Sorry ${this.ownerName}, but withdraws are not allowd from this account.`
   }
 }
 
