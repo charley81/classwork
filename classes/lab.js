@@ -250,3 +250,5 @@ class BankAccount {
 }
 
 const ChrisAccount = new BankAccount('Chris', 9000000000000)
+
+class CheckingAccount extends BankAccount {}
