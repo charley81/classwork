@@ -250,6 +250,7 @@ class BankAccount {
 }
 
 const chrisAccount = new BankAccount('Chris', 100)
+console.log('From Bank Account:', chrisAccount)
 
 class CheckingAccount extends BankAccount {
   constructor(ownerName, balance, overDraftEnabled) {
@@ -259,15 +260,15 @@ class CheckingAccount extends BankAccount {
   }
 
   withdraw(amount) {
-    if (this.balance < amount) {
-      return `Insuficient Funds: Sorry but your current balance is $${this.balance} and you are requesting to withdraw $${amount}`
+    if (this.overDraftEnabled && this.balance < amount) {
+      return `Insuficient Funds: Sorry ${this.ownerName} but your current balance is $${this.balance} and you are requesting to withdraw $${amount}`
     }
     return super.withdraw(amount)
   }
 }
 
 const chrisChecking = new CheckingAccount('Chris', 250)
-console.log(chrisChecking.withdraw(350))
+console.log('From Checking', chrisChecking.withdraw(350))
 
 class SavingsAccount extends BankAccount {
   constructor(ownerName) {
@@ -281,4 +282,4 @@ class SavingsAccount extends BankAccount {
 }
 
 const chrisSavings = new SavingsAccount('Chris')
-console.log(chrisSavings.withdraw())
+console.log('From Savings: ', chrisSavings.withdraw())
