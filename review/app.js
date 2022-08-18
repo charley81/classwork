@@ -57,6 +57,12 @@ if (animal === 'Cow') {
   console.log("Hey! You're not a cow.")
 }
 
+// E
+const age = 21
+age >= 16
+  ? console.log('Here are the keys!')
+  : console.log("Sorry, you're too young")
+
 // ===== SECTION II =====
 
 // ===== SECTION III =====
