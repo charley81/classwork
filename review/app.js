@@ -22,7 +22,15 @@ var val2 = val //3
  *
  */
 
-console.log(val2)
+// B
+let firstVariable
+firstVariable = 'Hello'
+firstVariable = 123
+let secondVariable = firstVariable
+secondVariable = 'anyString'
+// firstVariable = 123
+const chris = 'Chris'
+const expression = `Hello my name is ${chris}`
 
 // ===== SECTION II =====
 
