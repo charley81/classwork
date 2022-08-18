@@ -196,5 +196,70 @@ console.log(
 thomasCloset[2][2] = 'Footie Pajamas'
 
 // ===== SECTION IV =====
+// A
+const printGreeting = name => `Hello there ${name}`
+
+// B
+const printCool = name => `${name} is cool`
+
+// C
+const calculateCube = num => num * num * num
+
+// D
+const isVowel = letter => {
+  const vowels = ['a', 'e', 'i', 'o', 'u']
+  if (vowels.includes(letter.toLowerCase())) {
+    return true
+  } else {
+    return false
+  }
+}
+// console.log(isVowel('c'))
+
+// E
+const getTwoLengths = (str1, str2) => {
+  const output = []
+  output.push(str1.length, str2.length)
+  return output
+}
+
+// console.log(getTwoLengths('hello', 'bye'))
+
+// F
+const getMultipleLengths = arr => {
+  const output = []
+  arr.forEach(word => output.push(word.length))
+  return output
+}
+
+// console.log(getMultipleLengths(['Hello', 'how', 'are', 'you']))
+
+// G
+const maxOfThree = (...args) => {
+  let output = args[0]
+  args.forEach(num => {
+    if (num > output) {
+      output = num
+    }
+  })
+  return output
+}
+
+// console.log(maxOfThree(4, 8, 2))
+
+// H
+function printLongestWord(arr) {
+  let output = ''
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length > output.length) {
+      output = arr[i]
+    }
+  }
+  return output
+}
+
+console.log(
+  printLongestWord(['apple', 'watermelon', 'peaches', 'fdkfjdkfjdkfjdfkjf'])
+)
 
 // ===== SECTION V =====
