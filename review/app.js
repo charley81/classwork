@@ -112,6 +112,10 @@ for (let i = 0; i <= 100; i++) {
 }
 
 // ===== SECTION III =====
+// A
+// indexes
+// Yes
+// A shopping list
 
 // ===== SECTION IV =====
 
