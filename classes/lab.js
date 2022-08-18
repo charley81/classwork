@@ -249,6 +249,37 @@ class BankAccount {
   }
 }
 
-const ChrisAccount = new BankAccount('Chris', 9000000000000)
+const chrisAccount = new BankAccount('Chris', 100)
 
-class CheckingAccount extends BankAccount {}
+class CheckingAccount extends BankAccount {
+  constructor(ownerName, balance) {
+    super(ownerName, balance)
+    this.overDraftEnabled = true
+    this.balance = balance
+  }
+
+  withdraw(amount) {
+    if (this.balance < amount) {
+      return `Insuficient Funds: Sorry but your current balance is $${this.balance} and you are requesting to withdraw $${amount}`
+    }
+    return super.withdraw()
+  }
+}
+
+const chrisChecking = new CheckingAccount('Chris', 150)
+console.log(chrisChecking.withdraw(250))
+
+class SavingsAccount extends BankAccount {
+  constructor(ownerName, balance) {
+    super(ownerName, balance)
+    this.ownerName = ownerName
+    this.balance = balance
+  }
+
+  withdraw() {
+    return `Sorry ${this.ownerName}, but withdraws are not allowd from this account`
+  }
+}
+
+const chrisSavings = new SavingsAccount('Chris')
+console.log(chrisSavings.withdraw())
