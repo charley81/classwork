@@ -88,12 +88,28 @@ age >= 16
 
 // C
 // for (let i = 0; i <= 100; i++) {
-//   if (i % 5 === 0) {
+//   if (i % 15 === 0) {
+//     console.log(`I found a ${i}. Three is a crowd, High five!`)
+//   } else if (i % 5 === 0) {
 //     console.log(`I found a ${i}. High five!`)
+//   } else if (i % 3 === 0) {
+//     console.log(`I found a ${i}. Three is a crowd`)
 //   } else {
 //     console.log(i)
 //   }
 // }
+
+// D
+let bankAccount = 0
+for (let i = 0; i <= 10; i++) {
+  bankAccount += i
+}
+
+let bonusAccount = 0
+for (let i = 0; i <= 100; i++) {
+  const numMultiplied = i * 2
+  bonusAccount += numMultiplied
+}
 
 // ===== SECTION III =====
 
