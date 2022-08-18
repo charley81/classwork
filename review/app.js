@@ -49,6 +49,14 @@ console.log(e === 'Kevin')
 console.log(a + b === c)
 console.log(a * a === d)
 
+// D
+const animal = 'Cow'
+if (animal === 'Cow') {
+  console.log('mooooo')
+} else {
+  console.log("Hey! You're not a cow.")
+}
+
 // ===== SECTION II =====
 
 // ===== SECTION III =====
