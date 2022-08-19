@@ -258,8 +258,49 @@ function printLongestWord(arr) {
   return output
 }
 
-console.log(
-  printLongestWord(['apple', 'watermelon', 'peaches', 'fdkfjdkfjdkfjdfkjf'])
-)
+// console.log(
+//   printLongestWord(['apple', 'watermelon', 'peaches', 'fdkfjdkfjdkfjdfkjf'])
+// )
+
+// Objects
+const user = {
+  name: 'John Doe',
+  email: 'jdoe@mail.com',
+  age: 21,
+  purchases: [],
+}
+
+user.email = 'test@mail.com'
+user.age++
+user.location = '555 main st. Brooklyn NY'
+user.purchases.push('carbohydrates', 'piece of mind', 'merino jodhpurs')
+console.log(user.purchases[2])
+
+user.friend = {
+  name: 'Jane Doe',
+  age: 21,
+  location: '555 main st. Brookly NY',
+  purchases: [],
+}
+console.log(user.friend.name)
+console.log(user.friend.location)
+user.friend.age = 55
+user.friend.purchases.push('The One Ring', 'A latte')
+console.log(user.friend.purchases[1])
+user.purchases.forEach(item => console.log(item))
+user.friend.purchases.forEach(item => console.log(item))
+
+const updateUser = () => {
+  user.age++
+  user.name.toUpperCase()
+}
+
+const oldAndLoud = person => {
+  console.log(person)
+  person.age++
+  person.name.toUpperCase()
+}
+
+oldAndLoud(user)
 
 // ===== SECTION V =====
