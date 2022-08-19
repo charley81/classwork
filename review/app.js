@@ -304,3 +304,43 @@ const oldAndLoud = person => {
 oldAndLoud(user)
 
 // ===== SECTION V =====
+const cat1 = {
+  name: 'bob',
+  breed: 'bobcat',
+  age: 3,
+}
+
+console.log(cat1.age)
+console.log(cat1.breed)
+
+const cat2 = {
+  name: 'big bob',
+  age: 5,
+  breed: 'bobcat',
+}
+
+// const combineCats = (cat1, cat2) => {
+//   console.log(cat1)
+//   console.log(cat2)
+// }
+
+// combineCats(cat1, cat2)
+
+const combineCats = (cat1, cat2) => {
+  return {
+    name: `${cat1.name}${cat2.name}`,
+    age: 1,
+    breed: `${cat1.breed}-${cat2.breed}`,
+  }
+}
+
+console.log(combineCats(cat1, cat2))
+
+console.log(
+  'Last:',
+  combineCats(
+    combineCats(cat1, cat2),
+    combineCats(cat1, cat2),
+    combineCats(cat1, cat2)
+  )
+)
