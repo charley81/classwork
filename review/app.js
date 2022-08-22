@@ -514,3 +514,11 @@ for (let i = 1; i <= 20; i++) {
 for (let i = 0; i <= 200; i += 2) {
   // console.log(i)
 }
+
+// ===== fizz buzz =====
+for (let i = 1; i <= 100; i++) {
+  if (i % 15 === 0) console.log(`${i}: FizzBuzz`)
+  if (i % 5 === 0) console.log(`${i}: Buzz`)
+  if (i % 3 === 0) console.log(`${i}: Fizz`)
+  console.log(i)
+}
