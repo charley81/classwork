@@ -585,4 +585,18 @@ whereIsWaldo.splice(1, 1)
 whereIsWaldo[1][2] = 'No One'
 console.log(whereIsWaldo[2][1][1])
 
-console.log(whereIsWaldo)
+// console.log(whereIsWaldo)
+const sayings = [
+  'human... why are you taking pictures of me',
+  'the catnip made me do it',
+  'why does the red dot always get away',
+]
+
+const randomNumber = Math.floor(Math.random() * sayings.length)
+
+// for (let i = 0; i < 20; i++) {
+//   if (i % 2 === 0) {
+//     console.log(sayings[randomNumber])
+//   }
+//   console.log('love me, pet me! hssssssss!')
+// }
