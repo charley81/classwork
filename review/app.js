@@ -572,3 +572,17 @@ const lastHalf = favMovies.slice(Math.ceil(favMovies.length / 2)) //yes
 // console.log(lastHalf)
 // -1
 // no, const is fine for changing values within an array
+
+// ===== where is waldo =====
+const whereIsWaldo = [
+  ['timmy', 'frank'],
+  'eggbert',
+  ['lucinda', 'jacc', 'neff', 'snoop'],
+  ['petunia', ['baked goods', 'waldo']],
+]
+
+whereIsWaldo.splice(1, 1)
+whereIsWaldo[1][2] = 'No One'
+console.log(whereIsWaldo[2][1][1])
+
+console.log(whereIsWaldo)
