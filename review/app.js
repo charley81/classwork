@@ -638,3 +638,9 @@ const kristynOutfit1 = `Kristyn is wearing a ${kristynsCloset[3]}, some ${kristy
 
 const thomasOutfit1 = `Thomas is wearing a ${thomasCloset[0][3]}, some ${thomasCloset[1][1]}, and some ${thomasCloset[2][2]}`
 const thomasOutfit2 = `Thomas is wearing a ${thomasCloset[0][1]}, some ${thomasCloset[1][0]}, and some ${thomasCloset[2][0]}`
+
+// kristynsCloset.forEach(clothing =>
+//   console.log(`We're now washing: ${clothing}`)
+// )
+
+// thomasCloset.forEach(arr => console.log(arr))
