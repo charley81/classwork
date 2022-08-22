@@ -1,346 +1,511 @@
-// ===== SECTION I Vars & Datatypes =====
-// A
-var val = 'A' //1
-val = 'B' //2
-var val2 = val //3
-/**
- * 4
- * Declare: When you declare a function
- * function() {}
- *
- * Assgin: When you assign a value to a varable
- * const letter = 'A'
- *
- * Define: When you define a function???
- * function() {}
- *
- * 5
- * pseudocoding is when you write out the step that you want to code in human readable text. This helps you figure out the step that you need to take to complete the problem
- *
- * 6
- * 90% thinking about how to solve and 10% solving
- *
- */
+// // ===== SECTION I Vars & Datatypes =====
+// // A
+// var val = 'A' //1
+// val = 'B' //2
+// var val2 = val //3
+// /**
+//  * 4
+//  * Declare: When you declare a function
+//  * function() {}
+//  *
+//  * Assgin: When you assign a value to a varable
+//  * const letter = 'A'
+//  *
+//  * Define: When you define a function???
+//  * function() {}
+//  *
+//  * 5
+//  * pseudocoding is when you write out the step that you want to code in human readable text. This helps you figure out the step that you need to take to complete the problem
+//  *
+//  * 6
+//  * 90% thinking about how to solve and 10% solving
+//  *
+//  */
 
-// B
-let firstVariable
-firstVariable = 'Hello'
-firstVariable = 123
-let secondVariable = firstVariable
-secondVariable = 'anyString'
+// // B
+// let firstVariable
+// firstVariable = 'Hello'
 // firstVariable = 123
-const chris = 'Chris'
-const expression = `Hello my name is ${chris}`
+// let secondVariable = firstVariable
+// secondVariable = 'anyString'
+// // firstVariable = 123
+// const chris = 'Chris'
+// const expression = `Hello my name is ${chris}`
 
-// C
-const a = 4
-const b = 53
-const c = 57
-const d = 16
-const e = 'Kevin'
+// // C
+// const a = 4
+// const b = 53
+// const c = 57
+// const d = 16
+// const e = 'Kevin'
 
-console.log(a !== b)
-console.log(c !== d)
-console.log('Name' === 'Name')
-console.log(true || false)
-console.log(false || false || false || false || false || true)
-console.log(false === false)
-console.log(e === 'Kevin')
-console.log(a + b === c)
-console.log(a * a === d)
+// console.log(a !== b)
+// console.log(c !== d)
+// console.log('Name' === 'Name')
+// console.log(true || false)
+// console.log(false || false || false || false || false || true)
+// console.log(false === false)
+// console.log(e === 'Kevin')
+// console.log(a + b === c)
+// console.log(a * a === d)
 
-// D
-const animal = 'Cow'
-if (animal === 'Cow') {
-  console.log('mooooo')
-} else {
-  console.log("Hey! You're not a cow.")
-}
+// // D
+// const animal = 'Cow'
+// if (animal === 'Cow') {
+//   console.log('mooooo')
+// } else {
+//   console.log("Hey! You're not a cow.")
+// }
 
-// E
-const age = 21
-age >= 16
-  ? console.log('Here are the keys!')
-  : console.log("Sorry, you're too young")
+// // E
+// const age = 21
+// age >= 16
+//   ? console.log('Here are the keys!')
+//   : console.log("Sorry, you're too young")
 
-// ===== SECTION II =====
-// A
+// // ===== SECTION II =====
+// // A
+// // for (let i = 0; i <= 10; i++) {
+// //   console.log(i)
+// // }
+
+// // for (let i = 10; i <= 400; i++) {
+// //   console.log(i)
+// // }
+
+// // for (let i = 12; i <= 4000; i += 3) {
+// //   console.log(i)
+// // }
+
+// // B
+// // for (let i = 1; i <= 100; i++) {
+// //   if (i % 2 === 0) {
+// //     console.log(`${i} is an even number`)
+// //   } else {
+// //     console.log(i)
+// //   }
+// // }
+
+// // C
+// // for (let i = 0; i <= 100; i++) {
+// //   if (i % 15 === 0) {
+// //     console.log(`I found a ${i}. Three is a crowd, High five!`)
+// //   } else if (i % 5 === 0) {
+// //     console.log(`I found a ${i}. High five!`)
+// //   } else if (i % 3 === 0) {
+// //     console.log(`I found a ${i}. Three is a crowd`)
+// //   } else {
+// //     console.log(i)
+// //   }
+// // }
+
+// // D
+// let bankAccount = 0
 // for (let i = 0; i <= 10; i++) {
-//   console.log(i)
+//   bankAccount += i
 // }
 
-// for (let i = 10; i <= 400; i++) {
-//   console.log(i)
-// }
-
-// for (let i = 12; i <= 4000; i += 3) {
-//   console.log(i)
-// }
-
-// B
-// for (let i = 1; i <= 100; i++) {
-//   if (i % 2 === 0) {
-//     console.log(`${i} is an even number`)
-//   } else {
-//     console.log(i)
-//   }
-// }
-
-// C
+// let bonusAccount = 0
 // for (let i = 0; i <= 100; i++) {
-//   if (i % 15 === 0) {
-//     console.log(`I found a ${i}. Three is a crowd, High five!`)
-//   } else if (i % 5 === 0) {
-//     console.log(`I found a ${i}. High five!`)
-//   } else if (i % 3 === 0) {
-//     console.log(`I found a ${i}. Three is a crowd`)
-//   } else {
-//     console.log(i)
-//   }
+//   const numMultiplied = i * 2
+//   bonusAccount += numMultiplied
 // }
 
-// D
-let bankAccount = 0
-for (let i = 0; i <= 10; i++) {
-  bankAccount += i
-}
+// // ===== SECTION III =====
+// // A
+// // indexes
+// // Yes
+// // A shopping list
 
-let bonusAccount = 0
-for (let i = 0; i <= 100; i++) {
-  const numMultiplied = i * 2
-  bonusAccount += numMultiplied
-}
+// // B
+// const quotes = [
+//   'I have no special talent. I am only passionately curious',
+//   'Wisely, and slow. They stumble that run fast.',
+//   'If you judge people, you have no time to love them.',
+// ]
 
-// ===== SECTION III =====
-// A
-// indexes
-// Yes
-// A shopping list
+// // C
+// const randomThings = [1, 10, 'Hello', true]
+// randomThings[0]
+// randomThings[2] = 'World'
 
-// B
-const quotes = [
-  'I have no special talent. I am only passionately curious',
-  'Wisely, and slow. They stumble that run fast.',
-  'If you judge people, you have no time to love them.',
-]
+// // D
+// const ourClass = ['Salty', 'Zoom', 'Sardine', 'Slack', 'Github']
+// ourClass[2]
+// ourClass[4] = 'Octocat'
+// ourClass.push('Cloud City')
 
-// C
-const randomThings = [1, 10, 'Hello', true]
-randomThings[0]
-randomThings[2] = 'World'
+// // E
+// const myArray = [5, 10, 500, 20]
+// myArray.push('Aegon', 'Hello')
+// myArray.shift()
+// myArray.unshift('Bob Marley')
+// myArray.pop()
+// myArray.reverse()
+// /**
+//  * Yes the array is mutated
+//  * Mutate means altering the original
+//  * It returned the array reversed
+//  */
 
-// D
-const ourClass = ['Salty', 'Zoom', 'Sardine', 'Slack', 'Github']
-ourClass[2]
-ourClass[4] = 'Octocat'
-ourClass.push('Cloud City')
+// // F
+// const myInt = 22
+// if (myInt < 100) {
+//   console.log('little number')
+// } else {
+//   console.log('big number')
+// }
 
-// E
-const myArray = [5, 10, 500, 20]
-myArray.push('Aegon', 'Hello')
-myArray.shift()
-myArray.unshift('Bob Marley')
-myArray.pop()
-myArray.reverse()
-/**
- * Yes the array is mutated
- * Mutate means altering the original
- * It returned the array reversed
- */
+// // G
+// if (myInt < 5) {
+//   console.log('little number')
+// } else if (myInt > 10) {
+//   console.log('big number')
+// } else {
+//   console.log('monkey')
+// }
 
-// F
-const myInt = 22
-if (myInt < 100) {
-  console.log('little number')
-} else {
-  console.log('big number')
-}
+// // H
+// const kristynsCloset = [
+//   'left shoe',
+//   'cowboy boots',
+//   'right sock',
+//   'GA hoodie',
+//   'green pants',
+//   'yellow knit hat',
+//   'marshmallow peeps',
+// ]
 
-// G
-if (myInt < 5) {
-  console.log('little number')
-} else if (myInt > 10) {
-  console.log('big number')
-} else {
-  console.log('monkey')
-}
-
-// H
-const kristynsCloset = [
-  'left shoe',
-  'cowboy boots',
-  'right sock',
-  'GA hoodie',
-  'green pants',
-  'yellow knit hat',
-  'marshmallow peeps',
-]
-
-const thomasCloset = [
-  [
-    'grey button-up',
-    'dark grey button-up',
-    'light blue button-up',
-    'blue button-up',
-  ],
-  ['grey jeans', 'jeans', 'PJs'],
-  ['wool mittens', 'wool scarf', 'raybans'],
-]
-console.log(`Kristyn is rocking that ${kristynsCloset[2]} today`)
-kristynsCloset.splice(6, 0, 'raybans')
-kristynsCloset[5] = 'stained knit hat'
-
-console.log(
-  `Thom is looking fierce in a ${thomasCloset[0][0]}, ${thomasCloset[1][1]} and ${thomasCloset[2][2]}`
-)
-thomasCloset[2][2] = 'Footie Pajamas'
-
-// ===== SECTION IV =====
-// A
-const printGreeting = name => `Hello there ${name}`
-
-// B
-const printCool = name => `${name} is cool`
-
-// C
-const calculateCube = num => num * num * num
-
-// D
-const isVowel = letter => {
-  const vowels = ['a', 'e', 'i', 'o', 'u']
-  if (vowels.includes(letter.toLowerCase())) {
-    return true
-  } else {
-    return false
-  }
-}
-// console.log(isVowel('c'))
-
-// E
-const getTwoLengths = (str1, str2) => {
-  const output = []
-  output.push(str1.length, str2.length)
-  return output
-}
-
-// console.log(getTwoLengths('hello', 'bye'))
-
-// F
-const getMultipleLengths = arr => {
-  const output = []
-  arr.forEach(word => output.push(word.length))
-  return output
-}
-
-// console.log(getMultipleLengths(['Hello', 'how', 'are', 'you']))
-
-// G
-const maxOfThree = (...args) => {
-  let output = args[0]
-  args.forEach(num => {
-    if (num > output) {
-      output = num
-    }
-  })
-  return output
-}
-
-// console.log(maxOfThree(4, 8, 2))
-
-// H
-function printLongestWord(arr) {
-  let output = ''
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i].length > output.length) {
-      output = arr[i]
-    }
-  }
-  return output
-}
+// const thomasCloset = [
+//   [
+//     'grey button-up',
+//     'dark grey button-up',
+//     'light blue button-up',
+//     'blue button-up',
+//   ],
+//   ['grey jeans', 'jeans', 'PJs'],
+//   ['wool mittens', 'wool scarf', 'raybans'],
+// ]
+// console.log(`Kristyn is rocking that ${kristynsCloset[2]} today`)
+// kristynsCloset.splice(6, 0, 'raybans')
+// kristynsCloset[5] = 'stained knit hat'
 
 // console.log(
-//   printLongestWord(['apple', 'watermelon', 'peaches', 'fdkfjdkfjdkfjdfkjf'])
+//   `Thom is looking fierce in a ${thomasCloset[0][0]}, ${thomasCloset[1][1]} and ${thomasCloset[2][2]}`
 // )
+// thomasCloset[2][2] = 'Footie Pajamas'
 
-// Objects
-const user = {
-  name: 'John Doe',
-  email: 'jdoe@mail.com',
-  age: 21,
-  purchases: [],
-}
+// // ===== SECTION IV =====
+// // A
+// const printGreeting = name => `Hello there ${name}`
 
-user.email = 'test@mail.com'
-user.age++
-user.location = '555 main st. Brooklyn NY'
-user.purchases.push('carbohydrates', 'piece of mind', 'merino jodhpurs')
-console.log(user.purchases[2])
+// // B
+// const printCool = name => `${name} is cool`
 
-user.friend = {
-  name: 'Jane Doe',
-  age: 21,
-  location: '555 main st. Brookly NY',
-  purchases: [],
-}
-console.log(user.friend.name)
-console.log(user.friend.location)
-user.friend.age = 55
-user.friend.purchases.push('The One Ring', 'A latte')
-console.log(user.friend.purchases[1])
-user.purchases.forEach(item => console.log(item))
-user.friend.purchases.forEach(item => console.log(item))
+// // C
+// const calculateCube = num => num * num * num
 
-const updateUser = () => {
-  user.age++
-  user.name.toUpperCase()
-}
+// // D
+// const isVowel = letter => {
+//   const vowels = ['a', 'e', 'i', 'o', 'u']
+//   if (vowels.includes(letter.toLowerCase())) {
+//     return true
+//   } else {
+//     return false
+//   }
+// }
+// // console.log(isVowel('c'))
 
-const oldAndLoud = person => {
-  console.log(person)
-  person.age++
-  person.name.toUpperCase()
-}
-
-oldAndLoud(user)
-
-// ===== SECTION V =====
-const cat1 = {
-  name: 'bob',
-  breed: 'bobcat',
-  age: 3,
-}
-
-console.log(cat1.age)
-console.log(cat1.breed)
-
-const cat2 = {
-  name: 'big bob',
-  age: 5,
-  breed: 'bobcat',
-}
-
-// const combineCats = (cat1, cat2) => {
-//   console.log(cat1)
-//   console.log(cat2)
+// // E
+// const getTwoLengths = (str1, str2) => {
+//   const output = []
+//   output.push(str1.length, str2.length)
+//   return output
 // }
 
-// combineCats(cat1, cat2)
+// // console.log(getTwoLengths('hello', 'bye'))
 
-const combineCats = (cat1, cat2) => {
-  return {
-    name: `${cat1.name}${cat2.name}`,
-    age: 1,
-    breed: `${cat1.breed}-${cat2.breed}`,
-  }
+// // F
+// const getMultipleLengths = arr => {
+//   const output = []
+//   arr.forEach(word => output.push(word.length))
+//   return output
+// }
+
+// // console.log(getMultipleLengths(['Hello', 'how', 'are', 'you']))
+
+// // G
+// const maxOfThree = (...args) => {
+//   let output = args[0]
+//   args.forEach(num => {
+//     if (num > output) {
+//       output = num
+//     }
+//   })
+//   return output
+// }
+
+// // console.log(maxOfThree(4, 8, 2))
+
+// // H
+// function printLongestWord(arr) {
+//   let output = ''
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i].length > output.length) {
+//       output = arr[i]
+//     }
+//   }
+//   return output
+// }
+
+// // console.log(
+// //   printLongestWord(['apple', 'watermelon', 'peaches', 'fdkfjdkfjdkfjdfkjf'])
+// // )
+
+// // Objects
+// const user = {
+//   name: 'John Doe',
+//   email: 'jdoe@mail.com',
+//   age: 21,
+//   purchases: [],
+// }
+
+// user.email = 'test@mail.com'
+// user.age++
+// user.location = '555 main st. Brooklyn NY'
+// user.purchases.push('carbohydrates', 'piece of mind', 'merino jodhpurs')
+// console.log(user.purchases[2])
+
+// user.friend = {
+//   name: 'Jane Doe',
+//   age: 21,
+//   location: '555 main st. Brookly NY',
+//   purchases: [],
+// }
+// console.log(user.friend.name)
+// console.log(user.friend.location)
+// user.friend.age = 55
+// user.friend.purchases.push('The One Ring', 'A latte')
+// console.log(user.friend.purchases[1])
+// user.purchases.forEach(item => console.log(item))
+// user.friend.purchases.forEach(item => console.log(item))
+
+// const updateUser = () => {
+//   user.age++
+//   user.name.toUpperCase()
+// }
+
+// const oldAndLoud = person => {
+//   console.log(person)
+//   person.age++
+//   person.name.toUpperCase()
+// }
+
+// oldAndLoud(user)
+
+// // ===== SECTION V =====
+// const cat1 = {
+//   name: 'bob',
+//   breed: 'bobcat',
+//   age: 3,
+// }
+
+// console.log(cat1.age)
+// console.log(cat1.breed)
+
+// const cat2 = {
+//   name: 'big bob',
+//   age: 5,
+//   breed: 'bobcat',
+// }
+
+// // const combineCats = (cat1, cat2) => {
+// //   console.log(cat1)
+// //   console.log(cat2)
+// // }
+
+// // combineCats(cat1, cat2)
+
+// const combineCats = (cat1, cat2) => {
+//   return {
+//     name: `${cat1.name}${cat2.name}`,
+//     age: 1,
+//     breed: `${cat1.breed}-${cat2.breed}`,
+//   }
+// }
+
+// console.log(combineCats(cat1, cat2))
+
+// console.log(
+//   'Last:',
+//   combineCats(
+//     combineCats(cat1, cat2),
+//     combineCats(cat1, cat2),
+//     combineCats(cat1, cat2)
+//   )
+// )
+
+// // Class Review
+
+// class Hamster {
+//   constructor(name) {
+//     this.owner = ''
+//     this.name = name
+//     this.price = 15
+//   }
+
+//   wheelRun() {
+//     console.log(`squeak squeak`)
+//   }
+
+//   eatFood() {
+//     console.log('nibble nibble')
+//   }
+
+//   getPrice() {
+//     return this.price
+//   }
+// }
+
+// class Person {
+//   constructor(name) {
+//     this.name = name
+//     this.age = 0
+//     this.height = 0
+//     this.weight = 0
+//     this.mood = 0
+//     this.hamsters = []
+//     this.bankAccount = 0
+//   }
+
+//   getName() {
+//     return this.name
+//   }
+
+//   getAge() {
+//     return this.age
+//   }
+
+//   getWeight() {
+//     return this.weight
+//   }
+
+//   greet() {
+//     console.log('Hello ${this.name}')
+//   }
+
+//   eat() {
+//     this.weight++
+//     this.mood++
+//   }
+
+//   exercise() {
+//     this.weight--
+//   }
+
+//   ageUp() {
+//     this.age++
+//     this.height++
+//     this.weight++
+//     this.mood--
+//     this.bankAccount += 10
+//   }
+
+//   buyHamster(hamster) {
+//     console.log('=========', hamster)
+//     console.log('=========', hamster.getPrice)
+//     this.hamsters.push(hamster)
+//     this.mood += 10
+//     this.bankAccount -= hamster.getPrice()
+//   }
+// }
+
+// const billy = new Hamster('Billy')
+// const christopher = new Person('chris')
+// const buy = christopher.buyHamster(billy)
+
+// const timmy = new Person('Timmy')
+// timmy.ageUp()
+// timmy.ageUp()
+// timmy.ageUp()
+// timmy.ageUp()
+// timmy.ageUp()
+
+// timmy.eat()
+// timmy.eat()
+// timmy.eat()
+// timmy.eat()
+// timmy.eat()
+
+// timmy.exercise()
+// timmy.exercise()
+// timmy.exercise()
+// timmy.exercise()
+// timmy.exercise()
+
+// timmy.ageUp()
+// timmy.ageUp()
+// timmy.ageUp()
+// timmy.ageUp()
+// timmy.ageUp()
+// timmy.ageUp()
+// timmy.ageUp()
+// timmy.ageUp()
+// timmy.ageUp()
+
+// const gus = new Hamster('Gus')
+
+// gus.owner = 'Timmy'
+
+// timmy.buyHamster(gus)
+
+// for (let i = 0; i < 15; i++) {
+//   timmy.ageUp()
+// }
+
+// timmy.eat()
+// timmy.eat()
+
+// timmy.exercise()
+// timmy.exercise()
+
+// class Dinner {
+//   constructor(appetizer, entree, dessert) {
+//     this.appetizer = appetizer
+//     this.entree = entree
+//     this.dessert = dessert
+//   }
+// }
+
+// class Chef {
+//   newDinner(appetizer, entree, dessert) {
+//     return new Dinner(appetizer, entree, dessert)
+//   }
+// }
+
+// const chef = new Chef()
+// const pizzaDinner = chef.newDinner('cheese sticks', 'pizza', 'cinnamon rolls')
+// const fishDinner = chef.newDinner()
+
+// class Dinner {
+//   constructor(appetizer, entree, dessert) {
+//     this.appetizer = appetizer
+//     this.entree = entree
+//     this.dessert = dessert
+//   }
+// }
+
+// class Chef {
+//   newDinner(appetizer, entree, dessert) {
+//     return new Dinner(appetizer, entree, dessert)
+//   }
+// }
+
+// const chefMike = new Chef()
+
+// const chefsMexDinner = chefMike.newDinner('salsa and chips', 'tacos', 'flan')
+
+// ===== Easy Going =====
+for (let i = 1; i <= 20; i++) {
+  console.log(i)
 }
-
-console.log(combineCats(cat1, cat2))
-
-console.log(
-  'Last:',
-  combineCats(
-    combineCats(cat1, cat2),
-    combineCats(cat1, cat2),
-    combineCats(cat1, cat2)
-  )
-)
