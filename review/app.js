@@ -535,7 +535,13 @@ wolfy[3] = 'Gotham City'
 // console.log(wolfy)
 dart.push('Hawkins')
 // console.log(dart)
-for (let i = 0; i < wolfy.length; i++) {
-  wolfy[i] = wolfy[i].replace('wolf', 'Gameboy')
-}
+// for (let i = 0; i < wolfy.length; i++) {
+//   wolfy[i] = wolfy[i].replace('wolf', 'Gameboy')
+// }
 // console.log(wolfy)
+
+// ===== yell at the ninja turtles =====
+const ninjaTurtles = ['Donatello', 'Leonardo', 'Raphael', 'Michaelangelo']
+for (let turtle of ninjaTurtles) {
+  console.log(turtle.toUpperCase())
+}
