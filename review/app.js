@@ -583,7 +583,7 @@ const whereIsWaldo = [
 
 whereIsWaldo.splice(1, 1)
 whereIsWaldo[1][2] = 'No One'
-console.log(whereIsWaldo[2][1][1])
+// console.log(whereIsWaldo[2][1][1])
 
 // console.log(whereIsWaldo)
 const sayings = [
@@ -600,3 +600,41 @@ const randomNumber = Math.floor(Math.random() * sayings.length)
 //   }
 //   console.log('love me, pet me! hssssssss!')
 // }
+
+const nums = [
+  14, 11, 16, 15, 13, 16, 15, 17, 19, 11, 12, 14, 19, 11, 15, 17, 11, 18, 12,
+  17, 12, 71, 18, 15, 12,
+]
+
+let middle = Math.floor(nums.length / 2)
+// console.log(nums[middle])
+
+// ===== return of the closets =====
+const kristynsCloset = [
+  'left shoe',
+  'cowboy boots',
+  'right sock',
+  'GA hoodie',
+  'green pants',
+  'yellow knit hat',
+  'marshmallow peeps',
+]
+
+const thomasCloset = [
+  [
+    'grey button-up',
+    'dark grey button-up',
+    'light blue button-up',
+    'blue button-up',
+  ],
+  ['grey jeans', 'jeans', 'PJs'],
+  ['wool mittens', 'wool scarf', 'raybans'],
+]
+
+const kristynsShoe = kristynsCloset[0]
+thomasCloset[2].push(kristynsShoe)
+// console.log(thomasCloset[2])
+const kristynOutfit1 = `Kristyn is wearing a ${kristynsCloset[3]}, some ${kristynsCloset[4]} and a ${kristynsCloset[5]}`
+
+const thomasOutfit1 = `Thomas is wearing a ${thomasCloset[0][3]}, some ${thomasCloset[1][1]}, and some ${thomasCloset[2][2]}`
+const thomasOutfit2 = `Thomas is wearing a ${thomasCloset[0][1]}, some ${thomasCloset[1][0]}, and some ${thomasCloset[2][0]}`
