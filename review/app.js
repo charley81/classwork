@@ -505,7 +505,12 @@
 
 // const chefsMexDinner = chefMike.newDinner('salsa and chips', 'tacos', 'flan')
 
-// ===== Easy Going =====
+// ===== easy going =====
 for (let i = 1; i <= 20; i++) {
-  console.log(i)
+  // console.log(i)
+}
+
+// ===== get even =====
+for (let i = 0; i <= 200; i += 2) {
+  // console.log(i)
 }
