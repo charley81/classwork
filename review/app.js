@@ -543,5 +543,32 @@ dart.push('Hawkins')
 // ===== yell at the ninja turtles =====
 const ninjaTurtles = ['Donatello', 'Leonardo', 'Raphael', 'Michaelangelo']
 for (let turtle of ninjaTurtles) {
-  console.log(turtle.toUpperCase())
+  // console.log(turtle.toUpperCase())
 }
+
+// ===== methods revisited =====
+const favMovies = [
+  'jaws',
+  'the fellowhip of the ring',
+  "howl's moving castle",
+  'django',
+  'titanic',
+]
+// console.log(favMovies.indexOf('titanic'))
+favMovies.sort()
+// console.log(favMovies)
+// it permantly sorts the array of strings in alphabetic order
+favMovies.pop()
+favMovies.push('guardians of the galaxy')
+favMovies.reverse()
+// console.log(favMovies)
+favMovies.shift()
+// console.log(favMovies.unshift()) // 4
+favMovies.splice(favMovies.indexOf('django'), 1, 'avatar')
+// yes it alters the array
+// console.log(favMovies)
+// console.log(favMovies)
+const lastHalf = favMovies.slice(Math.ceil(favMovies.length / 2)) //yes
+// console.log(lastHalf)
+// -1
+// no, const is fine for changing values within an array
