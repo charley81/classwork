@@ -247,26 +247,198 @@ const panagram = [
   'reallylongword',
 ]
 
-// Filter
+// Filter => returns all items that pass the provided testing function
 const lessThanFour = nums3.filter(num => num < 4)
 // console.log(lessThanFour)
 const wordsWithEvenLength = panagram.filter(word => word.length % 2 === 0)
 // console.log(wordsWithEvenLength)
 
-// Find
+// Find => returns the first item in a array that passes the provided testing function
 const findFirstDivByFive = nums3.find(num => num % 5 === 0)
 // console.log(findFirstDivByFive)
 
 const findLongerThanFive = panagram.find(word => word.length > 5)
 // console.log(findLongerThanFive)
 
-// Find Index
+// Find Index => returns the index of the first item in a array that passes the provided testing function
 const findIndexDivByThree = nums3.findIndex(num => num % 3 === 0)
 // console.log(findIndexDivByThree)
 const wordIndexLessThanTwo = panagram.findIndex(word => word.length < 2)
 // console.log(wordIndexLessThanTwo)
 
-// forEach
+// forEach => executes a provided function on each item in an array
 // const numMultByThree = nums3.forEach(num => console.log(num * 3))
 // console.log(numMultByThree)
 // const addEx = panagram.forEach(word => console.log(`${word}!`))
+
+// Map => creates a new array with the results of calling the callback function
+const multiplyByHundred = nums3.map(num => num * 100)
+// console.log(multiplyByHundred)
+const allUpper = panagram.map(word => word.toUpperCase())
+// console.log(allUpper)
+// Some => test wether at least one element in the arr passes the condition and returns a boolean
+const someDivByThree = nums3.some(num => num % 3 === 0)
+// console.log(someDivByThree)
+const someA = panagram.some(word => word.includes('a'))
+// console.log(someA)
+
+// reduce
+const numsSum2 = nums3.reduce((acc, cur) => acc + cur, 0)
+// console.log(numsSum2)
+const wordsConcat = panagram.reduce((acc, cur) => acc + cur)
+// console.log(wordsConcat)
+
+// sort
+const nums4 = [15, 5, 1, 45, 2, 19]
+const words4 = ['these', 'are', 'some', 'words', 'in', 'a', 'array']
+const numsSorted1 = nums4.sort()
+// I didn't get what I would expect (I would expect the numbers to be sorted from low to high but it looks like it sorts by the first digit in a number)
+// console.log(numsSorted1)
+const wordsSorted = words4.sort()
+// console.log(wordsSorted)
+// this looks as expectd, it looks like it sorts in alphabetic order according to first letter in the string
+const numsAscending = nums4.sort((a, b) => a - b)
+// console.log(numsAscending)
+const numsDescending = nums4.sort((a, b) => b - a)
+// console.log(numsDescending)
+const wordsAscending = words4.sort((a, b) => a - b)
+// console.log(wordsAscending)
+const wordsDescending = words4.sort((a, b) => (a > b ? -1 : 1))
+// console.log(wordsDescending)
+// console.log(words4)
+// the original array get mutated
+
+const panagramArr = [
+  'The',
+  'quick',
+  'brown',
+  'fox',
+  'jumps',
+  'over',
+  'the',
+  'lazy',
+  'dog',
+]
+
+const isPanagram = arr => {
+  const alphabet = 'abcdefghijqlmnopqrstuvwxyz'.split('')
+  const newArr = arr.toString().toLowerCase().split('')
+  return alphabet.every(letter => newArr.includes(letter))
+}
+
+isPanagram(panagramArr)
+
+const products = [
+  {
+    name: 'allen wrench',
+    price: 2.99,
+    description: 'handy tool',
+  },
+  {
+    name: 'cornucopia',
+    price: 5.99,
+    description: 'festive holiday decoration',
+  },
+  {
+    name: 'banana',
+    price: 0.99,
+    description: 'full of potassium',
+  },
+  {
+    name: 'guillotine (cigar)',
+    price: 10.59,
+    description: 'behead your stub',
+  },
+  {
+    name: 'jack-o-lantern',
+    price: 3.99,
+    description: 'spooky seasonal fun',
+  },
+  {
+    name: 'doggie treat (box)',
+    price: 5.99,
+    description: "fido loves 'em",
+  },
+  {
+    name: 'egg separator',
+    price: 3.99,
+    description: 'it separates yolks from whites',
+  },
+  {
+    name: 'LED lightbulb',
+    price: 6.55,
+    description: "It's super-efficient!",
+  },
+  {
+    name: 'owl pellets',
+    price: 3.99,
+    description: "Don't ask what they used to be.",
+  },
+  {
+    name: 'flag',
+    price: 5.99,
+    description: 'catches the breeze',
+  },
+  {
+    name: 'hair brush',
+    price: 6.99,
+    description: 'fine boar bristles',
+  },
+  {
+    name: 'iridium (one gram)',
+    price: 19.36,
+    description: 'corrosion-resistant metal',
+  },
+  {
+    name: 'quark',
+    price: 0.01,
+    description: 'Very small',
+  },
+  {
+    name: 'turtleneck',
+    price: 19.99,
+    description: 'available in black and slightly-darker black',
+  },
+  {
+    name: 'kaleidoscope',
+    price: 8.25,
+    description: 'tube with moving plastic pieces inside',
+  },
+  {
+    name: 'mitt (leather)',
+    price: 15,
+    description: 'regulation sized',
+  },
+  {
+    name: 'nothing',
+    price: 10,
+    description: "Hey, if you pay us, we won't ask any questions.",
+  },
+  {
+    name: 'violin',
+    price: 2000,
+    description: 'Talk about a JS fiddle...',
+  },
+  {
+    name: 'yoyo',
+    price: 1,
+    description: 'We had to pull some strings to get this one in.',
+  },
+  {
+    name: 'pincushion',
+    price: 1.99,
+    description: "You'll get 'stuck' on it",
+  },
+]
+
+const lessThanTen = products.filter(item => item.price < 10)
+// console.log(lessThanTen)
+const sortedNames = products.sort((a, b) => {
+  const namesA = a.name.toUpperCase()
+  const namesB = b.name.toUpperCase()
+
+  if (namesA < namesB) return -1 // A would come first
+  if (namesA > namesB) return 1 // A would come second, B would come first
+  return 0 // names are equal, so both values are unchanged
+})
+console.log(sortedNames)

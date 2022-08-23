@@ -225,4 +225,41 @@ class PersonCl {
 }
 
 const jessie = new PersonCl('Jessie', 1921)
-console.log(jessie)
+
+// OBJECT FACTORY
+
+class Car {
+  constructor(maker, serialNumber) {
+    this.serialNumber = serialNumber
+    this.maker = maker
+  }
+
+  drive() {
+    console.log(`skkkkkkkrrrrrrrrrrtttttt`)
+  }
+}
+
+class Facrtory {
+  constructor(company) {
+    this.company = company
+    this.cars = []
+  }
+
+  generateCar() {
+    const newCar = new Car(this.company, this.cars.length)
+    this.cars.push(newCar)
+  }
+
+  findCar(index) {
+    return this.cars[index]
+  }
+}
+
+const tesla = new Facrtory('Tesla')
+
+for (let i = 0; i < 100; i++) {
+  tesla.generateCar()
+}
+
+console.log(tesla)
+console.log(tesla.findCar(99))
