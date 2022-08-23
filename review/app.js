@@ -594,20 +594,47 @@ const sayings = [
 
 const randomNumber = Math.floor(Math.random() * sayings.length)
 
-// for (let i = 0; i < 20; i++) {
-//   if (i % 2 === 0) {
-//     console.log(sayings[randomNumber])
-//   }
-//   console.log('love me, pet me! hssssssss!')
-// }
+for (let i = 0; i < 20; i++) {
+  if (i % 2 === 0) {
+    console.log(sayings[randomNumber])
+  }
+  console.log('love me, pet me! hssssssss!')
+}
 
-const nums = [
+const num6 = [
   14, 11, 16, 15, 13, 16, 15, 17, 19, 11, 12, 14, 19, 11, 15, 17, 11, 18, 12,
   17, 12, 71, 18, 15, 12,
 ]
+const findMedian = arr => {
+  const sorted = arr.sort((a, b) => a - b)
 
-let middle = Math.floor(nums.length / 2)
-// console.log(nums[middle])
+  if (sorted.length % 2 === 0) {
+    const first = sorted[sorted.length / 2 - 1]
+    const second = sorted[sorted.length / 2]
+    return first + second / 2
+  } else {
+    const mid = Math.floor(sorted.length / 2)
+    return sorted[mid]
+  }
+}
+
+findMedian(num6)
+
+// const arr = [4, 6, 2, 45, 2, 78, 5, 89, 34, 6];
+// const findMedian = (arr = []) => {
+//    const sorted = arr.slice().sort((a, b) => {
+//       return a - b;
+//    });
+//    if(sorted.length % 2 === 0){
+//       const first = sorted[sorted.length / 2 - 1];
+//       const second = sorted[sorted.length / 2];
+//       return (first + second) / 2;
+//    }
+//    else{
+//       const mid = Math.floor(sorted.length / 2);
+//       return sorted[mid];
+//    };
+// };
 
 // ===== return of the closets =====
 const kristynsCloset = [

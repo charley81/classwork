@@ -441,4 +441,4 @@ const sortedNames = products.sort((a, b) => {
   if (namesA > namesB) return 1 // A would come second, B would come first
   return 0 // names are equal, so both values are unchanged
 })
-console.log(sortedNames)
+// console.log(sortedNames)
