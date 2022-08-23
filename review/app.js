@@ -620,22 +620,6 @@ const findMedian = arr => {
 
 findMedian(num6)
 
-// const arr = [4, 6, 2, 45, 2, 78, 5, 89, 34, 6];
-// const findMedian = (arr = []) => {
-//    const sorted = arr.slice().sort((a, b) => {
-//       return a - b;
-//    });
-//    if(sorted.length % 2 === 0){
-//       const first = sorted[sorted.length / 2 - 1];
-//       const second = sorted[sorted.length / 2];
-//       return (first + second) / 2;
-//    }
-//    else{
-//       const mid = Math.floor(sorted.length / 2);
-//       return sorted[mid];
-//    };
-// };
-
 // ===== return of the closets =====
 const kristynsCloset = [
   'left shoe',
