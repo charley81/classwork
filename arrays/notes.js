@@ -204,7 +204,7 @@ const arr2Copy = arr2.slice() // creates a copy
 // arr.concat(arg1, arg2)
 const arr3 = [1, 2]
 // console.log(arr3.concat([3, 4]))
-console.log(arr3.concat([3, 4], 5, 6))
+// console.log(arr3.concat([3, 4], 5, 6))
 
 // forEach
 const arr4 = ['apples', 'grapes', 'cherries', 'peaches', 'mango']
@@ -215,10 +215,58 @@ const arr4 = ['apples', 'grapes', 'cherries', 'peaches', 'mango']
 // indexOf - lastIndexOf - includes
 let arr5 = [1, 0, false]
 
-console.log(arr5.indexOf(0)) // 1
-console.log(arr5.indexOf(false)) // 2
-console.log(arr5.indexOf(null)) // -1
+// console.log(arr5.indexOf(0)) // 1
+// console.log(arr5.indexOf(false)) // 2
+// console.log(arr5.indexOf(null)) // -1
 
-const fruits = ['Apple', 'Orange', 'Apple']
-console.log(fruits.indexOf('Apple')) // 0 - first apple
-console.log(fruits.lastIndexOf('Apple')) // 2 - second apple
+// const fruits = ['Apple', 'Orange', 'Apple']
+// console.log(fruits.indexOf('Apple')) // 0 - first apple
+// console.log(fruits.lastIndexOf('Apple')) // 2 - second apple
+
+// map => takes an array, manipulates/mutates that array and then returns a new array
+// filter => return all items meeting the condition
+// forEach => executes provided function once for each item in array
+// every => check if every items passes a test and returns a boolean
+
+const newestArr = [0, 1, 2, 3, 4, 5]
+
+const isBelowTen = newestArr.every(num => num < 10)
+// console.log(isBelowTen)
+
+const nums3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0]
+const panagram = [
+  'The',
+  'quick',
+  'brown',
+  'fox',
+  'jumps',
+  'over',
+  'the',
+  'lazy',
+  'dog',
+  'reallylongword',
+]
+
+// Filter
+const lessThanFour = nums3.filter(num => num < 4)
+// console.log(lessThanFour)
+const wordsWithEvenLength = panagram.filter(word => word.length % 2 === 0)
+// console.log(wordsWithEvenLength)
+
+// Find
+const findFirstDivByFive = nums3.find(num => num % 5 === 0)
+// console.log(findFirstDivByFive)
+
+const findLongerThanFive = panagram.find(word => word.length > 5)
+// console.log(findLongerThanFive)
+
+// Find Index
+const findIndexDivByThree = nums3.findIndex(num => num % 3 === 0)
+// console.log(findIndexDivByThree)
+const wordIndexLessThanTwo = panagram.findIndex(word => word.length < 2)
+// console.log(wordIndexLessThanTwo)
+
+// forEach
+// const numMultByThree = nums3.forEach(num => console.log(num * 3))
+// console.log(numMultByThree)
+// const addEx = panagram.forEach(word => console.log(`${word}!`))
