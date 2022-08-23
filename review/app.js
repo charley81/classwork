@@ -646,9 +646,13 @@ const kristynsShoe = kristynsCloset[0]
 thomasCloset[2].push(kristynsShoe)
 // console.log(thomasCloset[2])
 const kristynOutfit1 = `Kristyn is wearing a ${kristynsCloset[3]}, some ${kristynsCloset[4]} and a ${kristynsCloset[5]}`
+const kristynOutfit2 = `Kristyn is wearing a ${kristynsCloset[0]}, some ${kristynsCloset[4]} and a ${kristynsCloset[2]}`
+const kristynOutfit3 = `Kristyn is wearing a ${kristynsCloset[5]}, some ${kristynsCloset[6]} and a ${kristynsCloset[0]}`
 
 const thomasOutfit1 = `Thomas is wearing a ${thomasCloset[0][3]}, some ${thomasCloset[1][1]}, and some ${thomasCloset[2][2]}`
-const thomasOutfit2 = `Thomas is wearing a ${thomasCloset[0][1]}, some ${thomasCloset[1][0]}, and some ${thomasCloset[2][0]}`
+const thomasOutfit2 = `Thomas is wearing a ${thomasCloset[0][0]}, some ${thomasCloset[1][2]}, and some ${thomasCloset[2][0]}`
+const thomasOutfit3 = `Thomas is wearing a ${thomasCloset[0][2]}, some ${thomasCloset[1][0]}, and a ${thomasCloset[2][1]}`
+console.log(thomasOutfit3)
 
 // kristynsCloset.forEach(clothing =>
 //   console.log(`We're now washing: ${clothing}`)
