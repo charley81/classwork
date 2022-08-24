@@ -62,3 +62,5 @@ menuLinks.forEach(item => {
   anchor.textContent = item.text
   nav.appendChild(anchor)
 })
+
+// console.log(window.navigator)
