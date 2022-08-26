@@ -10,7 +10,7 @@ mainEl.classList.add('flex-ctr')
 
 // Task 2.0
 nav.style.height = '100%'
-nav.style.backgroundColor = 'var(--color-primary)'
+nav.style.backgroundColor = 'var(--color-grey-dark)'
 nav.classList.add('flex-around')
 
 // Task 5.0
