@@ -1,19 +1,11 @@
+// global
 const mainEl = document.querySelector('main')
 const nav = document.querySelector('#top-menu')
+const subMenuEl = document.querySelector('#sub-menu')
+const topMenuLinks = nav.querySelectorAll('a')
+let showingSubMenu = false
 
-// Task 1.0
-mainEl.style.backgroundColor = 'var(--color-dark)'
-const mainH1 = document.createElement('h1')
-mainH1.textContent = 'SEI Rocks!'
-mainEl.append(mainH1)
-mainEl.classList.add('flex-ctr')
-
-// Task 2.0
-nav.style.height = '100%'
-nav.style.backgroundColor = 'var(--color-grey-dark)'
-nav.classList.add('flex-around')
-
-// Task 5.0
+// menuLinks => array of objects for nav links
 const menuLinks = [
   { text: 'about', href: '/about' },
   {
@@ -44,7 +36,15 @@ const menuLinks = [
   },
 ]
 
-// Task 3.1
+mainEl.style.backgroundColor = 'var(--color-dark)'
+const mainH1 = document.createElement('h1')
+mainH1.textContent = 'SEI Rocks!'
+mainEl.append(mainH1)
+mainEl.classList.add('flex-ctr')
+nav.style.height = '100%'
+nav.style.backgroundColor = 'var(--color-grey-dark)'
+nav.classList.add('flex-around')
+
 menuLinks.forEach(item => {
   const anchor = document.createElement('a')
   anchor.setAttribute('href', item.href)
@@ -52,39 +52,25 @@ menuLinks.forEach(item => {
   nav.appendChild(anchor)
 })
 
-// Task 4.0
-const subMenuEl = document.querySelector('#sub-menu')
-// 4.1
 subMenuEl.style.height = '100%'
-// 4.2
 subMenuEl.style.backgroundColor = 'var(--color-grey-light)'
-// 4.3
 subMenuEl.classList.add('flex-around')
-// 4.4
 subMenuEl.style.position = 'absolute'
-// 4.5
 subMenuEl.style.top = '0'
-// 5.0 Done
-// 5.1
-const topMenuLinks = nav.querySelectorAll('a')
 
-let showingSubMenu = false
-// 5.2
 nav.addEventListener('click', e => {
   e.preventDefault()
   if (e.target.tagName !== 'A') return
-  // 5.3
+
   if (e.target.classList.contains('active')) {
     e.target.classList.remove('active')
     showingSubMenu = false
     subMenuEl.style.top = '0'
     return
   }
-  // 5.4
+
   topMenuLinks.forEach(item => item.classList.remove('active'))
-  // 5.5
   e.target.classList.add('active')
-  // 5.6
   let linkObj
   menuLinks.forEach(item => {
     if (item.text === e.target.textContent) {
