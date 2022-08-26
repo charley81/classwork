@@ -75,7 +75,6 @@ nav.addEventListener('click', e => {
   if (e.target.tagName !== 'A') return
   // 5.3
   if (e.target.classList.contains('active')) {
-    console.log('got it')
     e.target.classList.remove('active')
     showingSubMenu = false
     subMenuEl.style.top = '0'
@@ -88,8 +87,8 @@ nav.addEventListener('click', e => {
   // 5.6
   let linkObj
   menuLinks.forEach(item => {
-    linkObj = item
     if (item.text === e.target.textContent) {
+      linkObj = item
       if (item.hasOwnProperty('subLinks')) {
         showingSubMenu = true
       } else {
@@ -97,4 +96,20 @@ nav.addEventListener('click', e => {
       }
     }
   })
+  if (showingSubMenu) {
+    buildSubMenu(linkObj.subLinks)
+  } else {
+    subMenuEl.style.top = '0'
+  }
 })
+
+const buildSubMenu = obj => {
+  subMenuEl.style.top = '100%'
+  subMenuEl.textContent = ''
+  obj.forEach(obj => {
+    const anchor = document.createElement('a')
+    anchor.setAttribute('href', obj.href)
+    anchor.textContent = obj.text
+    subMenuEl.appendChild(anchor)
+  })
+}
