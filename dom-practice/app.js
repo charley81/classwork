@@ -2,7 +2,7 @@ const mainEl = document.querySelector('main')
 const nav = document.querySelector('#top-menu')
 
 // Task 1.0
-mainEl.style.backgroundColor = 'var(--main-bg)'
+mainEl.style.backgroundColor = 'var(--color-dark)'
 const mainH1 = document.createElement('h1')
 mainH1.textContent = 'SEI Rocks!'
 mainEl.append(mainH1)
@@ -10,7 +10,7 @@ mainEl.classList.add('flex-ctr')
 
 // Task 2.0
 nav.style.height = '100%'
-nav.style.backgroundColor = 'var(--top-menu-bg)'
+nav.style.backgroundColor = 'var(--color-primary)'
 nav.classList.add('flex-around')
 
 // Task 5.0
@@ -57,7 +57,7 @@ const subMenuEl = document.querySelector('#sub-menu')
 // 4.1
 subMenuEl.style.height = '100%'
 // 4.2
-subMenuEl.style.backgroundColor = 'var(--sub-menu-bg)'
+subMenuEl.style.backgroundColor = 'var(--color-grey-light)'
 // 4.3
 subMenuEl.classList.add('flex-around')
 // 4.4
@@ -110,6 +110,7 @@ const buildSubMenu = obj => {
     const anchor = document.createElement('a')
     anchor.setAttribute('href', obj.href)
     anchor.textContent = obj.text
+    anchor.style.color = 'var(--color-dark)'
     subMenuEl.appendChild(anchor)
   })
 }

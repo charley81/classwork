@@ -1,7 +1,10 @@
 :root {
-  --main-bg: #4a4e4d;
-  --top-menu-bg: #0e9aa7;
-  --sub-menu-bg: #3da4ab;
+  --color-primary: #4B7BEC;
+  --color-light: #F2F5FA;
+  --color-dark: #081125;
+  --color-grey-light: #DCDEE3;
+  --color-grey-dark: #404755;
+  --font-family: font-family: 'Montserrat', sans-serif;
 }
 
 * {
@@ -9,12 +12,16 @@
 }
 
 body {
-  font-family: Tahoma, Geneva, sans-serif;
+  font-family: var(--font-family);
   height: 100vh;
   margin: 0;
   display: grid;
   grid-template-rows: 3rem auto;
-  color: white;
+  color: var(--color-light);
+}
+
+h1 {
+  font-size: 4rem;
 }
 
 .flex-ctr {
@@ -34,11 +41,11 @@ nav a {
   padding: 0 1rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: white;
+  color: var(--color-light)
 }
 
 #top-menu a:hover {
-  background-color: var(--sub-menu-bg);
+  background-color: var(--color-primary);
 }
 header, #top-menu {
   position: relative;
@@ -52,13 +59,15 @@ header, #top-menu {
   width: 100%;
   z-index: 10;
   transition: top 0.5s ease-out;
+  display: flex;
+  justify-content: center;
 }
 
 #sub-menu a:hover {
-  background-color: var(--top-menu-bg);
+  background-color: var(--color-primary);
 }
 
 nav a.active {
-  background-color: var(--sub-menu-bg);
-  color: var(--main-bg);
+  background-color: var(--color-primary);
+  color: var(--color-grey-dark);
 }
