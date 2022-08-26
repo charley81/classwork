@@ -113,3 +113,12 @@ const buildSubMenu = obj => {
     subMenuEl.appendChild(anchor)
   })
 }
+
+subMenuEl.addEventListener('click', e => {
+  e.preventDefault()
+  if (e.target.tagName !== 'A') return
+  showingSubMenu = false
+  subMenuEl.style.top = '0'
+  topMenuLinks.forEach(item => item.classList.remove('active'))
+  mainH1.textContent = e.target.textContent
+})
