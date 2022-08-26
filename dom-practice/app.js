@@ -74,5 +74,27 @@ nav.addEventListener('click', e => {
   e.preventDefault()
   if (e.target.tagName !== 'A') return
   // 5.3
-  console.log(e.target.textContent)
+  if (e.target.classList.contains('active')) {
+    console.log('got it')
+    e.target.classList.remove('active')
+    showingSubMenu = false
+    subMenuEl.style.top = '0'
+    return
+  }
+  // 5.4
+  topMenuLinks.forEach(item => item.classList.remove('active'))
+  // 5.5
+  e.target.classList.add('active')
+  // 5.6
+  let linkObj
+  menuLinks.forEach(item => {
+    linkObj = item
+    if (item.text === e.target.textContent) {
+      if (item.hasOwnProperty('subLinks')) {
+        showingSubMenu = true
+      } else {
+        showingSubMenu = false
+      }
+    }
+  })
 })
