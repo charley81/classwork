@@ -110,7 +110,7 @@ const buildSubMenu = obj => {
   })
 }
 
-// when clicking in the submenu. check if the clicked element was a link and if not return out the functio and do nothing, but if it is a link close the menu. Also remove active class from all main menu links and set the text of the main H1 to the text content of the selcted link
+// when clicking in the submenu. check if the clicked element was a link and if not return out the function and do nothing, but if it is a link close the menu. Also remove active class from all main menu links and set the text of the main H1 to the text content of the selcted link
 subMenuEl.addEventListener('click', e => {
   e.preventDefault()
   if (e.target.tagName !== 'A') return
