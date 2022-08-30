@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+}
+
+.container {
+  width: 300px;
+  margin: 20px auto;
+  height: 300px;
+  display: grid;
+  grid-gap: 4px;
+  grid-template-rows: 100px 100px 1fr 1fr;
+  grid-template-columns: 80px 1fr 30px;
+}
+
+.item {
+  background: #F3F3F3;
+}
+
+.one {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.two {
+  background-color: red;
+}
+
+.three {
+}
+
+.four {
+  background-color: blue;
+}
+
+.five {
+}
+
+.six {
+}
+
+.seven {
+  background-color: yellow;
+}
