@@ -49,34 +49,44 @@ body {
   left: 40%;
 }
 
-.ex2:hover > .box1 {
-  transform: rotate(45deg);
-  transform-origin: top left;
-}
-.ex2:hover > .box2 {
-}
-.ex2:hover > .box3 {
-}
-.ex2:hover > .box4 {
-}
-
 .ex2 .box1 {
   background-color: red;
   height: 50px;
   width: 50px;
+  transition: all 2s ease;
 }
 .ex2 .box2 {
   background-color: yellow;
   height: 50px;
   width: 50px;
+  transition: all 2s ease;
 }
 .ex2 .box3 {
   background-color: blue;
   height: 50px;
   width: 50px;
+  transition: all 2s ease;
 }
 .ex2 .box4 {
   background-color: green;
   height: 50px;
   width: 50px;
+  transition: all 2s ease;
+}
+
+.ex2:hover > .box1 {
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+.ex2:hover > .box2 {
+  transform: rotate(-90deg);
+  transform-origin: top right;
+}
+.ex2:hover > .box3 {
+  transform: rotate(-90deg);
+  transform-origin: bottom left;
+}
+.ex2:hover > .box4 {
+  transform: rotate(90deg);
+  transform-origin: bottom right;
 }
