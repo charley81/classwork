@@ -1,0 +1,14 @@
+{
+  "name": "node-practice",
+  "version": "1.0.0",
+  "description": "node practice ",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chris Harley",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}
