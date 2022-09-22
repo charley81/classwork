@@ -5,7 +5,7 @@ const allMeats = (req, res) => {
 }
 
 const getSingleMeat = (req, res) => {
-  res.send(meats[parseInt(req.params.id)])
+  res.send(meats[parseInt(req.params.index)])
 }
 
 module.exports = {

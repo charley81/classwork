@@ -5,8 +5,10 @@ const allFruits = (req, res) => {
   res.send(fruits)
 }
 
-const getSingleFruit = (res, send) => {
-  res.send(fruits[parseInt(req.params.index)])
+const getSingleFruit = (req, res) => {
+  fruits[req.params.index]
+    ? res.send(fruits[parseInt(req.params.index)])
+    : res.send(`<h1>There is no fruit at index ${req.params.index}</h1>`)
 }
 
 const createNewFruitForm = (req, res) => {
