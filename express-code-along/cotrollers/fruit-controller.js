@@ -2,21 +2,35 @@ const fruits = require('../models/fruits')
 
 // get all fruits
 const allFruits = (req, res) => {
-  res.send(fruits)
+  res.render('Index', {
+    fruits,
+  })
 }
 
 const getSingleFruit = (req, res) => {
-  fruits[req.params.index]
-    ? res.send(fruits[parseInt(req.params.index)])
-    : res.send(`<h1>There is no fruit at index ${req.params.index}</h1>`)
+  if (fruits[req.params.index]) {
+    res.render('Show', {
+      fruit: fruits[req.params.index],
+    })
+  } else {
+    res.send(`<p>no fruit with the index of ${req.params.index} exist</p>`)
+  }
 }
 
 const createNewFruitForm = (req, res) => {
-  res.send('you get a form to create a new fruit')
+  res.render('New')
 }
 
 const createNew = (req, res) => {
-  res.send('creating a new fruit')
+  // ?name=peach&color=peachy&readyToEat=on
+  console.log(req.body)
+  if (req.body.readyToEat === 'on') {
+    req.body.readyToEat = true
+  } else {
+    req.body.readyToEat === 'false'
+  }
+  fruits.push(req.body)
+  res.redirect('/fruits')
 }
 
 const editSingleFruit = (req, res) => {

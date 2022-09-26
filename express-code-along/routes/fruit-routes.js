@@ -14,11 +14,11 @@ const {
 // index route => get all fruits
 router.get('/', allFruits)
 
-// show route => get single fruit
-router.get('/:index', getSingleFruit)
-
 // get form to create a new fruit
 router.get('/new', createNewFruitForm)
+
+// show route => get single fruit
+router.get('/:index', getSingleFruit)
 
 // create a new fruit
 router.post('/', createNew)
