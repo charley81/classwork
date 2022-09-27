@@ -1,30 +1,30 @@
 const React = require('react')
-const Layout = require('../layouts/layout')
+const Layout = require('react')
 
-class New extends React.Component {
+class Edit extends React.Component {
   render() {
     const displayBlock = {
       display: 'block',
     }
-
+    console.log(this.props)
     return (
-      <Layout title="create new fruit" group="fruits">
-        <h3>create new fruit</h3>
-        <form action="/fruits" method="POST">
+      <Layout title="edit page" group="fruits">
+        <h3>edit fruit</h3>
+        <form action="/fruits" method="PUT">
           <label htmlFor="name" style={displayBlock}>
-            name:
+            Name:
           </label>
           <input type="text" id="name" name="name" />
           <label htmlFor="color" style={displayBlock}>
-            color:
+            Color:
           </label>
           <input type="text" id="color" name="color" />
           <label htmlFor="readyToEat" style={displayBlock}>
-            ready:
+            Ready To Eat:
           </label>
           <input type="checkbox" id="readyToEat" name="readyToEat" />
           <button type="submit" style={displayBlock}>
-            submit
+            update
           </button>
         </form>
       </Layout>
@@ -32,4 +32,4 @@ class New extends React.Component {
   }
 }
 
-module.exports = New
+module.exports = Edit

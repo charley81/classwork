@@ -3,12 +3,32 @@ const router = express.Router()
 const {
   allVeggies,
   getSingleVeggie,
+  newForm,
+  createNew,
+  editForm,
+  updateVeggie,
+  deleteVeggie,
 } = require('../cotrollers/veggie-controller')
 
-// index route => get all veggies
+// index => get all veggies
 router.get('/', allVeggies)
 
-// show route => get single veggie
+// new => get form to create a new fruit
+router.get('/new', newForm)
+
+// show => get single veggie
 router.get('/:index', getSingleVeggie)
+
+// create a new fruit
+router.post('/', createNew)
+
+// edit => get edit form to update a single veggie
+router.get('/:index/edit', editForm)
+
+// update => update a single veggie
+router.patch('/:index', updateVeggie)
+
+// delete => delete a single veggie
+router.delete('/:index', deleteVeggie)
 
 module.exports = router

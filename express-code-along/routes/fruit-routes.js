@@ -1,7 +1,6 @@
 const express = require('express')
 const router = express.Router()
 const {
-  getHome,
   allFruits,
   getSingleFruit,
   createNewFruitForm,
@@ -11,7 +10,7 @@ const {
   deleteFruit,
 } = require('../cotrollers/fruit-controller.js')
 
-// index route => get all fruits
+// index => get all fruits
 router.get('/', allFruits)
 
 // get form to create a new fruit

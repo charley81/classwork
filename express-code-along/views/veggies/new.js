@@ -1,5 +1,4 @@
 const React = require('react')
-const Layout = require('../layouts/layout')
 
 class New extends React.Component {
   render() {
@@ -8,9 +7,9 @@ class New extends React.Component {
     }
 
     return (
-      <Layout title="create new fruit" group="fruits">
-        <h3>create new fruit</h3>
-        <form action="/fruits" method="POST">
+      <>
+        <h3>create new veggie</h3>
+        <form action="/veggies" method="POST">
           <label htmlFor="name" style={displayBlock}>
             name:
           </label>
@@ -19,15 +18,11 @@ class New extends React.Component {
             color:
           </label>
           <input type="text" id="color" name="color" />
-          <label htmlFor="readyToEat" style={displayBlock}>
-            ready:
-          </label>
-          <input type="checkbox" id="readyToEat" name="readyToEat" />
           <button type="submit" style={displayBlock}>
             submit
           </button>
         </form>
-      </Layout>
+      </>
     )
   }
 }

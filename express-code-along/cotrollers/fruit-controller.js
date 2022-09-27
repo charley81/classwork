@@ -1,46 +1,66 @@
 const fruits = require('../models/fruits')
 
-// get all fruits
+// @desc get all fruits
+// @route GET /fruits
+// @access public
 const allFruits = (req, res) => {
-  res.render('Index', {
+  res.render('fruits/Index', {
     fruits,
   })
 }
 
+// @desc get a single fruit
+// @route GET /fruits/:index
+// @access public
 const getSingleFruit = (req, res) => {
   if (fruits[req.params.index]) {
-    res.render('Show', {
+    res.render('fruits/Show', {
       fruit: fruits[req.params.index],
+      index: req.params.index,
     })
   } else {
     res.send(`<p>no fruit with the index of ${req.params.index} exist</p>`)
   }
 }
 
+// @desc get form to create a new fruit
+// @router GET /fruits/new
+// @access public
 const createNewFruitForm = (req, res) => {
-  res.render('New')
+  res.render('fruits/New')
 }
 
+// @desc create a new fruit
+// @route PUT /fruits
+// @access public
 const createNew = (req, res) => {
   // ?name=peach&color=peachy&readyToEat=on
-  console.log(req.body)
   if (req.body.readyToEat === 'on') {
     req.body.readyToEat = true
   } else {
     req.body.readyToEat === 'false'
   }
+
   fruits.push(req.body)
   res.redirect('/fruits')
 }
 
+// @desc edit form to update a fruit
+// @route GET /fruits/edit
+// access public
 const editSingleFruit = (req, res) => {
-  res.send('<you get a form to edit a single fruit')
+  res.render('fruits/Edit')
 }
 
+// @desc request to update a fruit
+// @route PATCH /fruits/:index
 const updateFruit = (req, res) => {
-  res.send('sending updated info to db')
+  res.send('updated a signle fruit')
 }
 
+// @desc request to delete a fruit
+// @route DELETE /fruits/:indexs
+// access public
 const deleteFruit = (req, res) => {
   res.send('deleted a signle fruit')
 }
