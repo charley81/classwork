@@ -1,11 +1,16 @@
 const express = require('express')
 const dotenv = require('dotenv').config()
+const mongoose = require('mongoose')
+const connectDB = require('./config/db')
+const colors = require('colors')
 
 // create our express app
 const app = express()
 
 // identify our port
 const PORT = process.env.PORT || 3000
+
+connectDB()
 
 // body parser middleware
 app.use(express.json())
@@ -22,6 +27,8 @@ app.engine('js', require('express-react-views').createEngine())
 app.use('/fruits', require('./routes/fruit-routes'))
 app.use('/meats', require('./routes/meat-routes'))
 app.use('/veggies', require('./routes/veggie-routes'))
+
+// connect to mongoDB with mongoose
 
 // listen to port
 app.listen(PORT, () => console.log(`listening on port: ${PORT}`))

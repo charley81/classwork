@@ -9,7 +9,7 @@ class Show extends React.Component {
       <Layout title={`Fruit: ${name}`} group="fruits">
         <h1>{name}</h1>
         <h3>Color: {color}</h3>
-        <h3>Ready To Eat: {readyToEat.toString().toUpperCase()}</h3>
+        <h3>Ready To Eat: {readyToEat}</h3>
         <p>{readyToEat ? 'Is ready to eat.' : 'Is NOT ready to eat.'}</p>
         <a href={route} style={{ display: 'block' }}>
           edit fruit

@@ -17,7 +17,7 @@ router.get('/', allFruits)
 router.get('/new', createNewFruitForm)
 
 // show route => get single fruit
-router.get('/:index', getSingleFruit)
+router.get('/:id', getSingleFruit)
 
 // create a new fruit
 router.post('/', createNew)

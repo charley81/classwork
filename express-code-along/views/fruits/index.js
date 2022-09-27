@@ -14,20 +14,23 @@ class Index extends React.Component {
       <Layout title="All Fruit" group="fruits">
         <div>
           <h3>fruits</h3>
-          {fruits.map((fruit, i) => {
+          {fruits.map(fruit => {
             const { name, color, readyToEat } = fruit
 
             return (
-              <ul style={{ margin: '2rem 0', paddingLeft: '0' }} key={name}>
+              <ul
+                style={{ margin: '2rem 0', paddingLeft: '0' }}
+                key={fruit._id}
+              >
                 <li style={{ listStyle: 'none' }}>name: {name}</li>
                 <li style={{ listStyle: 'none' }}>color: {color}</li>
                 <li style={{ listStyle: 'none' }}>
                   ready to eat: {readyToEat ? 'yep' : 'naw'}
                 </li>
-                <a href={`/fruits/${i}`} style={{ display: 'block' }}>
+                <a href={`/fruits/${fruit._id}`} style={{ display: 'block' }}>
                   view
                 </a>
-                <a href={`/fruits/${i}/edit`}>edit</a>
+                <a href={`/fruits/${fruit._id}/edit`}>edit</a>
               </ul>
             )
           })}

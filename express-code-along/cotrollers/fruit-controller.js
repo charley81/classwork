@@ -1,11 +1,20 @@
-const fruits = require('../models/fruits')
+// const fruits = require('../models/fruits')
+const fruitModel = require('../models/fruit-model')
 
 // @desc get all fruits
 // @route GET /fruits
 // @access public
 const allFruits = (req, res) => {
-  res.render('fruits/Index', {
-    fruits,
+  // find takes two arguments
+  // 1. an object with our query to filter our data and find exactly what we need
+  // 2. callback with an error object and the found data
+  fruitModel.find({}, (err, foundFruit) => {
+    if (err) {
+      res.status(400).json({ error: err })
+    } else {
+      res.status(200)
+      res.render('fruits/Index', { fruits: foundFruit })
+    }
   })
 }
 
@@ -13,14 +22,16 @@ const allFruits = (req, res) => {
 // @route GET /fruits/:index
 // @access public
 const getSingleFruit = (req, res) => {
-  if (fruits[req.params.index]) {
-    res.render('fruits/Show', {
-      fruit: fruits[req.params.index],
-      index: req.params.index,
-    })
-  } else {
-    res.send(`<p>no fruit with the index of ${req.params.index} exist</p>`)
-  }
+  // findBy accepts 2 args
+  // 1. id of doc in database
+  // 2. callback with err obj and found doc
+  fruitModel.findById(req.params.id, (error, foundFruit) => {
+    if (error) {
+      res.status(400).json({ error })
+    } else {
+      res.status(200).render('fruits/Show', { fruit: foundFruit })
+    }
+  })
 }
 
 // @desc get form to create a new fruit
@@ -40,9 +51,18 @@ const createNew = (req, res) => {
   } else {
     req.body.readyToEat === 'false'
   }
-
-  fruits.push(req.body)
-  res.redirect('/fruits')
+  // create has two arguments
+  //  1 the data we want to send
+  // 2 callback function
+  fruitModel.create(req.body, (err, createdFruit) => {
+    if (err) {
+      res.status(400).json({ error: err })
+    } else {
+      res.status(200)
+      res.redirect('/fruits')
+    }
+  })
+  // res.redirect('/fruits')
 }
 
 // @desc edit form to update a fruit
