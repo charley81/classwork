@@ -2,7 +2,7 @@ const React = require('react')
 
 class Layout extends React.Component {
   render() {
-    const { title } = this.props
+    const { title, group } = this.props
 
     return (
       <div>
@@ -12,10 +12,13 @@ class Layout extends React.Component {
             <link rel="stylesheet" href="/css/styles.css" />
           </head>
           <body>
-            <nav>
-              <a href={`/${this.props.group}`}>home</a>
+            <nav className="main-nav">
+              <div className="container">
+                <a href={`/${group}`}>home</a>
+                <a href={`/${group}/new`}>new {group}</a>
+              </div>
             </nav>
-            {this.props.children}
+            <div className="container">{this.props.children}</div>
           </body>
         </html>
       </div>

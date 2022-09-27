@@ -27,7 +27,7 @@ const getSingleFruit = (req, res) => {
   // 2. callback with err obj and found doc
   fruitModel.findById(req.params.id, (error, foundFruit) => {
     if (error) {
-      res.status(400).json({ error })
+      res.status(400).json(error)
     } else {
       res.status(200).render('fruits/Show', { fruit: foundFruit })
     }
