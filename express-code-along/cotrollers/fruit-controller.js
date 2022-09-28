@@ -45,12 +45,6 @@ const createNewFruitForm = (req, res) => {
 // @route PUT /fruits
 // @access public
 const createNew = (req, res) => {
-  // ?name=peach&color=peachy&readyToEat=on
-  if (req.body.readyToEat === 'on') {
-    req.body.readyToEat = true
-  } else {
-    req.body.readyToEat === 'false'
-  }
   // create has two arguments
   //  1 the data we want to send
   // 2 callback function
