@@ -62,27 +62,49 @@ const createNew = (req, res) => {
       res.redirect('/fruits')
     }
   })
-  // res.redirect('/fruits')
 }
 
 // @desc edit form to update a fruit
 // @route GET /fruits/edit
 // access public
 const editSingleFruit = (req, res) => {
-  res.render('fruits/Edit')
+  fruitModel.findById(req.params.id, (error, foundFruit) => {
+    if (error) {
+      res.status(400).json({ error })
+    } else {
+      res.status(200).render('fruits/Edit', { fruit: foundFruit })
+    }
+  })
 }
 
 // @desc request to update a fruit
 // @route PATCH /fruits/:index
 const updateFruit = (req, res) => {
-  res.send('updated a signle fruit')
+  // findByIdAndUpdate take 4 args
+  // 1. the ID
+  // 2. new data we want to use to update the old document
+  // 3. optional => an options object, which looks like this: {new: true}
+  // 4. callback (with error obj and foundFruit)
+  fruitModel.findByIdAndUpdate(req.params.id, req.body, (error, foundFruit) => {
+    if (error) {
+      res.status(400).json({ error })
+    } else {
+      res.status(200).redirect(`/fruits/${req.params.id}`)
+    }
+  })
 }
 
 // @desc request to delete a fruit
 // @route DELETE /fruits/:indexs
 // access public
 const deleteFruit = (req, res) => {
-  res.send('deleted a signle fruit')
+  fruitModel.findByIdAndDelete(req.params.id, (error, deletedFruit) => {
+    if (error) {
+      res.status(400).json({ error })
+    } else {
+      res.status(200).redirect('/fruits')
+    }
+  })
 }
 
 module.exports = {

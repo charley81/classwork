@@ -19,7 +19,7 @@ const allMeats = (req, res) => {
 // @route GET /meats/:index
 // access public
 const getSingleMeat = (req, res) => {
-  meatsModel.findById(req.params.id, (error, foundMeat) => {
+  meatModel.findById(req.params.id, (error, foundMeat) => {
     if (error) {
       res.status(400).json({ error })
     } else {
@@ -53,7 +53,7 @@ const createNew = (req, res) => {
 // @route PATCH /meats/edit
 // @access public
 const editForm = (req, res) => {
-  res.render('meats/edit')
+  res.render('meats/Edit')
 }
 
 // @desc update a single meat

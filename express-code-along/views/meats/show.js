@@ -3,7 +3,7 @@ const Layout = require('../layouts/layout')
 
 class Show extends React.Component {
   render() {
-    const { name, type } = this.props.meat
+    const { name, type, _id } = this.props.meat
 
     return (
       <Layout title={`Meat: `} group="meats">
@@ -19,7 +19,7 @@ class Show extends React.Component {
             action={`/meats/${this.props._id}`}
             method="DELETE"
           >
-            <a href={`/meats/${this.props._id}/edit`}>edit fruit</a>
+            <a href={`/meats/${_id}/edit`}>edit fruit</a>
             <button className="delete" type="submit">
               delete meat
             </button>

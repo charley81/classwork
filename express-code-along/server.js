@@ -2,7 +2,7 @@ const express = require('express')
 const dotenv = require('dotenv').config()
 const mongoose = require('mongoose')
 const connectDB = require('./config/db')
-const colors = require('colors')
+const methodOverride = require('method-override')
 
 // create our express app
 const app = express()
@@ -10,11 +10,15 @@ const app = express()
 // identify our port
 const PORT = process.env.PORT || 3000
 
+// mongoDB connection
 connectDB()
 
 // body parser middleware
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
+
+// method override to make delete request
+app.use(methodOverride('_method'))
 
 // css middleware
 app.use(express.static('public'))
@@ -27,8 +31,6 @@ app.engine('js', require('express-react-views').createEngine())
 app.use('/fruits', require('./routes/fruit-routes'))
 app.use('/meats', require('./routes/meat-routes'))
 app.use('/veggies', require('./routes/veggie-routes'))
-
-// connect to mongoDB with mongoose
 
 // listen to port
 app.listen(PORT, () => console.log(`listening on port: ${PORT}`))

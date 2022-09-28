@@ -8,6 +8,7 @@ const {
   editSingleFruit,
   updateFruit,
   deleteFruit,
+  seedDocs,
 } = require('../cotrollers/fruit-controller.js')
 
 // index => get all fruits
@@ -23,10 +24,10 @@ router.get('/:id', getSingleFruit)
 router.post('/', createNew)
 
 // get edit form to edit single fruit
-router.get('/:index/edit', editSingleFruit)
+router.get('/:id/edit', editSingleFruit)
 
 // update
-router.put('/:index', updateFruit)
+router.put('/:id', updateFruit)
 
 // delete a fruit
 router.delete('/:id', deleteFruit)

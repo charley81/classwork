@@ -11,7 +11,7 @@ class Index extends React.Component {
           <h1>all fruits</h1>
           <div className="items">
             {fruits.map(fruit => {
-              const { name, color, readyToEat } = fruit
+              const { name, color } = fruit
 
               return (
                 <ul key={fruit._id} className="item">
