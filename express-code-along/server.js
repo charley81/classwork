@@ -3,6 +3,7 @@ const dotenv = require('dotenv').config()
 const mongoose = require('mongoose')
 const connectDB = require('./config/db')
 const methodOverride = require('method-override')
+const colors = require('colors')
 
 // create our express app
 const app = express()
