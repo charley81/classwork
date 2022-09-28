@@ -6,7 +6,7 @@ class Show extends React.Component {
     const { name, type, _id } = this.props.meat
 
     return (
-      <Layout title={`Meat: `} group="meats">
+      <Layout title={`Meat: ${name}`} group="meats">
         <div className="wrapper show">
           <h1>
             <span className="dark">name:</span> {name}
@@ -14,13 +14,10 @@ class Show extends React.Component {
           <h3>
             <span className="dark">type:</span> {type}
           </h3>
-          <form
-            className="show-buttons"
-            action={`/meats/${this.props._id}`}
-            method="DELETE"
-          >
-            <a href={`/meats/${_id}/edit`}>edit fruit</a>
-            <button className="delete" type="submit">
+
+          <form action={`/meats/${_id}?_method=DELETE`} method="POST">
+            <a href={`/meats/${_id}/edit`}>edit meat</a>
+            <button className="delete" type="submit" value="Delete">
               delete meat
             </button>
           </form>

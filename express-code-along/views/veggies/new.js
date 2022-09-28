@@ -1,28 +1,38 @@
 const React = require('react')
+const Layout = require('../layouts/layout')
 
 class New extends React.Component {
   render() {
-    const displayBlock = {
-      display: 'block',
-    }
-
     return (
-      <>
-        <h3>create new veggie</h3>
-        <form action="/veggies" method="POST">
-          <label htmlFor="name" style={displayBlock}>
-            name:
-          </label>
-          <input type="text" id="name" name="name" />
-          <label htmlFor="color" style={displayBlock}>
-            color:
-          </label>
-          <input type="text" id="color" name="color" />
-          <button type="submit" style={displayBlock}>
-            submit
-          </button>
-        </form>
-      </>
+      <Layout title="create new veggie" group="veggies">
+        <div className="wrapper form">
+          <h1>create new veggie</h1>
+          <form action="/veggies" method="POST">
+            <div className="form-input">
+              <label htmlFor="name">name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="enter name..."
+              />
+            </div>
+            <div className="form-input">
+              <label htmlFor="color">color:</label>
+              <input
+                type="text"
+                id="color"
+                name="color"
+                placeholder="enter color..."
+              />
+            </div>
+
+            <button type="submit" className="btn">
+              submit
+            </button>
+          </form>
+        </div>
+      </Layout>
     )
   }
 }

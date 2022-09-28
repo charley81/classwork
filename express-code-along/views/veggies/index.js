@@ -1,39 +1,33 @@
 const React = require('react')
+const Layout = require('../layouts/layout')
 
 class Index extends React.Component {
   render() {
     const { veggies } = this.props
 
     return (
-      <>
-        <div>
-          <h3>veggies</h3>
-          {veggies.map((veggie, i) => {
-            const { name, color } = veggie
-            const route = `/veggies/${i}/edit`
+      <Layout title="all veggies" group="veggies">
+        <div className="wrapper">
+          <h1>all veggies</h1>
+          <div className="items">
+            {veggies.map(veg => {
+              const { name, color, _id } = veg
 
-            return (
-              <ul style={{ margin: '2rem 0', paddingLeft: '0' }} key={name}>
-                <li style={{ listStyle: 'none' }}>name: {name}</li>
-                <li style={{ listStyle: 'none' }}>color: {color}</li>
-                <a href={route}>edit</a>
-              </ul>
-            )
-          })}
-          <a
-            href="/veggies/new"
-            style={{ display: 'block', marginTop: '1rem' }}
-          >
-            create a new veggie
-          </a>
-          <a href="/meats" style={{ display: 'block', marginTop: '1rem' }}>
-            go to meats
-          </a>
-          <a href="/fruits" style={{ display: 'block', marginTop: '1rem' }}>
-            go to fruits
-          </a>
+              return (
+                <ul key={_id} className="item">
+                  <li>
+                    <span className="bold">name:</span> {name}
+                  </li>
+                  <li>
+                    <span className="bold">color:</span> {color}
+                  </li>
+                  <a href={`/veggies/${_id}`}>details</a>
+                </ul>
+              )
+            })}
+          </div>
         </div>
-      </>
+      </Layout>
     )
   }
 }

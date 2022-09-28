@@ -23,12 +23,12 @@ router.get('/:id', getSingleMeat)
 router.post('/', createNew)
 
 // edit form to edit single meat
-router.get('/:index/edit', editForm)
+router.get('/:id/edit', editForm)
 
 // update single meat
-router.put('/:index', updateMeat)
+router.put('/:id', updateMeat)
 
 // delete a meat
-router.delete('/:index', deleteMeat)
+router.delete('/:id', deleteMeat)
 
 module.exports = router

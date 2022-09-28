@@ -1,4 +1,5 @@
 // const meats = require('../models/meats')
+const fruitModel = require('../models/fruit-model')
 const meatModel = require('../models/meat-module')
 
 // @desc get all meats
@@ -53,21 +54,39 @@ const createNew = (req, res) => {
 // @route PATCH /meats/edit
 // @access public
 const editForm = (req, res) => {
-  res.render('meats/Edit')
+  meatModel.findById(req.params.id, (error, foundMeat) => {
+    if (error) {
+      res.status(400).json({ error })
+    } else {
+      res.status(200).render('meats/Edit', { meat: foundMeat })
+    }
+  })
 }
 
 // @desc update a single meat
 // @route PATCH /meats/:index
 // @access public
 const updateMeat = (req, res) => {
-  res.send('updated a single meat')
+  meatModel.findByIdAndUpdate(req.params.id, req.body, (error, foundMeat) => {
+    if (error) {
+      res.status(400).json({ error })
+    } else {
+      res.status(200).redirect(`/meats/${req.params.id}`)
+    }
+  })
 }
 
 // @desc delete a single meat
 // @route DELETE /meats/:index
 // @acess public
 const deleteMeat = (req, res) => {
-  res.send('deleted a single meat')
+  meatModel.findByIdAndDelete(req.params.id, (error, deletedMeat) => {
+    if (error) {
+      res.status(400).json({ error })
+    } else {
+      res.status(200).redirect('/meats')
+    }
+  })
 }
 
 module.exports = {

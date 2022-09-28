@@ -17,18 +17,18 @@ router.get('/', allVeggies)
 router.get('/new', newForm)
 
 // show => get single veggie
-router.get('/:index', getSingleVeggie)
+router.get('/:id', getSingleVeggie)
 
 // create a new fruit
 router.post('/', createNew)
 
 // edit => get edit form to update a single veggie
-router.get('/:index/edit', editForm)
+router.get('/:id/edit', editForm)
 
 // update => update a single veggie
-router.patch('/:index', updateVeggie)
+router.put('/:id', updateVeggie)
 
 // delete => delete a single veggie
-router.delete('/:index', deleteVeggie)
+router.delete('/:id', deleteVeggie)
 
 module.exports = router

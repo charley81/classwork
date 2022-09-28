@@ -1,29 +1,26 @@
 const React = require('react')
+const Layout = require('../layouts/layout')
 
 class Edit extends React.Component {
   render() {
-    const displayBlock = {
-      display: 'block',
-    }
+    console.log(this.props)
+    let { _id, name, type } = this.props.meat
 
     return (
-      <>
-        <h3>edit meat</h3>
-        <form action="/meats" method="PUT">
-          <label htmlFor="name" style={displayBlock}>
-            name:
-          </label>
-          <input type="text" id="name" name="name" />
-          <label htmlFor="type" style={displayBlock}>
-            type:
-          </label>
-          <input type="text" id="type" name="type" />
-
-          <button type="submit" style={displayBlock}>
-            update
-          </button>
-        </form>
-      </>
+      <Layout title="edit page" group="meats">
+        <div className="wrapper form">
+          <h3>edit fruit</h3>
+          <form action={`/meats/${_id}?_method=PUT`} method="POST">
+            <label htmlFor="name">name:</label>
+            <input type="text" id="name" name="name" defaultValue={name} />
+            <label htmlFor="color">type:</label>
+            <input type="text" id="color" name="color" defaultValue={type} />
+            <button type="submit" value="edit fruit" className="btn">
+              update
+            </button>
+          </form>
+        </div>
+      </Layout>
     )
   }
 }
