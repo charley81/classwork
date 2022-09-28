@@ -17,7 +17,7 @@ router.get('/', allMeats)
 router.get('/new', createMeatForm)
 
 // show => get single meat
-router.get('/:index', getSingleMeat)
+router.get('/:id', getSingleMeat)
 
 // create new meat
 router.post('/', createNew)

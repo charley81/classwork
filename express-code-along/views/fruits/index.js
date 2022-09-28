@@ -6,7 +6,7 @@ class Index extends React.Component {
     const { fruits } = this.props
 
     return (
-      <Layout title="All Fruit" group="fruits">
+      <Layout title="all fruit" group="fruits">
         <div className="wrapper">
           <h1>all fruits</h1>
           <div className="items">
@@ -21,9 +21,7 @@ class Index extends React.Component {
                   <li>
                     <span className="bold">color:</span> {color}
                   </li>
-                  <a href={`/fruits/${fruit._id}`} style={{ display: 'block' }}>
-                    details
-                  </a>
+                  <a href={`/fruits/${fruit._id}`}>details</a>
                 </ul>
               )
             })}

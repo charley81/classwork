@@ -1,36 +1,33 @@
 import React from 'react'
+import Layout from '../layouts/layout'
 
 class Index extends React.Component {
   render() {
     const { meats } = this.props
 
     return (
-      <>
-        <div>
-          <h3>meats</h3>
-          {meats.map((meat, i) => {
-            const { name, type } = meat
-            const route = `/meats/${i}/edit`
+      <Layout title="all meat" group="meats">
+        <div className="wrapper">
+          <h1>all meats</h1>
+          <div className="items">
+            {meats.map(meat => {
+              const { name, type } = meat
 
-            return (
-              <ul style={{ margin: '2rem 0', paddingLeft: '0' }} key={name}>
-                <li style={{ listStyle: 'none' }}>name: {name}</li>
-                <li style={{ listStyle: 'none' }}>type: {type}</li>
-                <a href={route}>edit</a>
-              </ul>
-            )
-          })}
-          <a href="/meats/new" style={{ display: 'block', marginTop: '1rem' }}>
-            create a new meat
-          </a>
-          <a href="/fruits" style={{ display: 'block', marginTop: '1rem' }}>
-            go to fruits
-          </a>
-          <a href="/veggies" style={{ display: 'block', marginTop: '1rem' }}>
-            go to veggies
-          </a>
+              return (
+                <ul key={meat._id} className="item">
+                  <li>
+                    <span className="bold">name:</span> {name}
+                  </li>
+                  <li>
+                    <span className="bold">type:</span> {type}
+                  </li>
+                  <a href={`/meats/${meat._id}`}>details</a>
+                </ul>
+              )
+            })}
+          </div>
         </div>
-      </>
+      </Layout>
     )
   }
 }

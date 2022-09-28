@@ -1,21 +1,31 @@
 const React = require('react')
+const Layout = require('../layouts/layout')
 
 class Show extends React.Component {
   render() {
     const { name, type } = this.props.meat
-    const route = `/meats/${this.props.index}/edit`
 
     return (
-      <>
-        <>
-          <h1>{name}</h1>
-          <h3>type: {type}</h3>
-          <a href={route} style={{ display: 'block' }}>
-            edit meat
-          </a>
-          <a href="/meats">back home</a>
-        </>
-      </>
+      <Layout title={`Meat: `} group="meats">
+        <div className="wrapper show">
+          <h1>
+            <span className="dark">name:</span> {name}
+          </h1>
+          <h3>
+            <span className="dark">type:</span> {type}
+          </h3>
+          <form
+            className="show-buttons"
+            action={`/meats/${this.props._id}`}
+            method="DELETE"
+          >
+            <a href={`/meats/${this.props._id}/edit`}>edit fruit</a>
+            <button className="delete" type="submit">
+              delete meat
+            </button>
+          </form>
+        </div>
+      </Layout>
     )
   }
 }

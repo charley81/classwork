@@ -3,8 +3,8 @@ const Layout = require('../layouts/layout')
 
 class Show extends React.Component {
   render() {
-    const { name, color, readyToEat } = this.props.fruit
-    const route = `/fruits/${this.props.index}/edit`
+    const { name, color } = this.props.fruit
+
     return (
       <Layout title={`Fruit: ${name}`} group="fruits">
         <div className="wrapper show">
@@ -14,11 +14,16 @@ class Show extends React.Component {
           <h3>
             <span className="dark">color:</span> {color}
           </h3>
-          <h3>
-            <span className="dark">ready:</span>{' '}
-            {readyToEat ? 'Is ready to eat.' : 'Is NOT ready to eat.'}
-          </h3>
-          <a href={route}>edit fruit</a>
+          <form
+            className="show-buttons"
+            action={`/fruits/${this.props._id}`}
+            method="DELETE"
+          >
+            <a href={`/fruits/${this.props._id}/edit`}>edit fruit</a>
+            <button className="delete" type="submit">
+              delete fruit
+            </button>
+          </form>
         </div>
       </Layout>
     )

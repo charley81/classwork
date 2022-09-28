@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const fruitSchema = mongoose.Schema({
+const veggieSchema = mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -11,4 +11,4 @@ const fruitSchema = mongoose.Schema({
   },
 })
 
-module.exports = mongoose.model('Fruit', fruitSchema)
+module.exports = mongoose.model('Veggies', veggieSchema)

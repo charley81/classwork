@@ -29,6 +29,6 @@ router.get('/:index/edit', editSingleFruit)
 router.put('/:index', updateFruit)
 
 // delete a fruit
-router.delete('/:index', deleteFruit)
+router.delete('/:id', deleteFruit)
 
 module.exports = router

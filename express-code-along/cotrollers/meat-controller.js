@@ -1,11 +1,17 @@
-const meats = require('../models/meats')
+// const meats = require('../models/meats')
+const meatModel = require('../models/meat-module')
 
 // @desc get all meats
 // @route GET /meats
 // @access pubic
 const allMeats = (req, res) => {
-  res.render('meats/Index', {
-    meats,
+  meatModel.find({}, (error, foundMeats) => {
+    if (error) {
+      res.status(400).json({ error })
+    } else {
+      res.status(200)
+      res.render('meats/Index', { meats: foundMeats })
+    }
   })
 }
 
@@ -13,14 +19,13 @@ const allMeats = (req, res) => {
 // @route GET /meats/:index
 // access public
 const getSingleMeat = (req, res) => {
-  if (meats[req.params.index]) {
-    res.render('meats/Show', {
-      meat: meats[req.params.index],
-      index: parseInt(req.params.index),
-    })
-  } else {
-    res.send(`<p>no meat with the index of ${req.params.index} exist</p>`)
-  }
+  meatsModel.findById(req.params.id, (error, foundMeat) => {
+    if (error) {
+      res.status(400).json({ error })
+    } else {
+      res.status(200).render('meats/Show', { meat: foundMeat })
+    }
+  })
 }
 
 // @desc get form to create a new meat
@@ -34,8 +39,14 @@ const createMeatForm = (req, res) => {
 // @route PUT /meats
 // @access public
 const createNew = (req, res) => {
-  meats.push(req.body)
-  res.redirect('/meats')
+  meatModel.create(req.body, (error, createdMeat) => {
+    if (error) {
+      res.status(400).json({ error })
+    } else {
+      res.status(200)
+      res.redirect('/meats')
+    }
+  })
 }
 
 // @desc get form to update a meat
