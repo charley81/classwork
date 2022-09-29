@@ -32,6 +32,7 @@ app.engine('js', require('express-react-views').createEngine())
 app.use('/fruits', require('./routes/fruit-routes'))
 app.use('/meats', require('./routes/meat-routes'))
 app.use('/veggies', require('./routes/veggie-routes'))
+app.use('/spices', require('./routes/spice-routes'))
 
 // listen to port
 app.listen(PORT, () => console.log(`listening on port: ${PORT}`))

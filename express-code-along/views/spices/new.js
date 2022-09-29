@@ -4,29 +4,30 @@ const Layout = require('../layouts/layout')
 class New extends React.Component {
   render() {
     return (
-      <Layout title="create new fruit" group="fruits">
+      <Layout title="create new spice" group="spices">
         <div className="wrapper form">
-          <h1>create new fruit</h1>
-          <form action="/fruits" method="POST">
-            <div className="form-input">
-              <label htmlFor="name">name:</label>
+          <h1>new spice</h1>
+          <form action="/spices" method="POST">
+            <div className="form-inupt">
+              <label htmlFor="">name:</label>
               <input
                 type="text"
+                placeholder="enter name..."
                 id="name"
                 name="name"
-                placeholder="enter name..."
+                required
               />
             </div>
-            <div className="form-input">
-              <label htmlFor="color">color:</label>
+            <div className="form-inupt">
+              <label htmlFor="">color:</label>
               <input
                 type="text"
+                placeholder="enter color..."
                 id="color"
                 name="color"
-                placeholder="enter color..."
+                required
               />
             </div>
-
             <button type="submit" className="btn">
               submit
             </button>
